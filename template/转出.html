@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>转出</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .info_box{padding:20px;}
+        .item_bg{background: #fff8f8;padding:10px 20px;line-height: 24px;color:#514848;}
+        .info_box .el-form .el-input{width:198px;}
+        .info_box .el-form-item{height: 40px;}
+        .info_box .el-form .el-form-item__error,.info_box .el-form .el-form-item__info{left:210px;top:10px;}
+        .info_box .el-form .el-form-item__info{color:#9e9e9e;}
+        .info_box .el-form-item__label{color:#222523;font-size: 12px;}
+        .info_box .el-input__inner{border-color:#dcdcdc;border-radius: 0;}
+        .el-button.width-160{margin-left: 120px;}
+        .el-form-item__content{height: 36px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo2.jpg"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt class="color_3">我的购物车</dt>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">订单中心</dt>
+            <dd><a href="#">我买到的宝贝</a></dd>
+            <dd><a href="#">取消订单记录</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">收藏夹</dt>
+            <dd><a href="#">收藏的商品</a></dd>
+            <dd><a href="#">收藏的店铺</a></dd>
+            <dd><a href="#">浏览历史</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">资产中心</dt>
+            <dd><a href="#">账户余额</a></dd>
+            <dd><a href="#" class="current">返利余额</a></dd>
+            <dd><a href="#">充值</a></dd>
+            <dd><a href="#">转出</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">我的维权</dt>
+            <dd><a href="#">退款</a></dd>
+            <dd><a href="#">退货</a></dd>
+            <dd><a href="#">换货</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="info_box font14 lthei relative">
+            <div class="item_bg mart10 color_8">
+                <p class="font16 color_3">转出须知：</p>
+                <p>1. 实时转出，需要到您的注册邮箱进行确认操作</p>
+                <p>2. 每笔转出最低额度为1.0000比特币，最高限额为1000.0000优氧币。 </p>
+                <p>3. 转出优氧币手续费为0.5%</p>
+            </div>
+            <form class="el-form demo-ruleForm mart30">
+                <div class="el-form-item is-error is-required">
+                    <label class="el-form-item__label" style="width:120px;">优氧币地址:</label>
+                    <div class="el-form-item__content" style="margin-left:120px;">
+                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" style="width: 350px;"></div>
+                        <div class="el-form-item__error" style="left: 360px;">请输入正确的优氧币地址</div>
+                    </div>
+                </div>
+                <div class="el-form-item  is-required">
+                    <label class="el-form-item__label" style="width:120px;">转出数额(Ф):</label>
+                    <div class="el-form-item__content" style="margin-left:120px;">
+                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner"></div>
+                        <div class="el-form-item__info">转出数额不能小于Ф 0.0100</div>
+                        <div class="el-form-item__error">数额不对</div>
+                    </div>
+                </div>
+                <div class="el-form-item  is-required">
+                    <label class="el-form-item__label" style="width:120px;">交易密码:</label>
+                    <div class="el-form-item__content" style="margin-left:120px;">
+                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner"></div>
+                        <div class="el-form-item__info">请输入交易密码</div>
+                        <div class="el-form-item__error">密码不符</div>
+                    </div>
+                </div>
+                <div class="el-form-item  is-required">
+                    <label class="el-form-item__label floatleft" style="width:120px;">手机验证码:</label>
+                    <div class="el-form-item__content floatleft">
+                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner"></div>
+                        <div class="el-form-item__info" style="width:300px;left:0;top:115%;">如果您的手机号为空或有误，请联系客服</div>
+                        <div class="el-form-item__error">数额不对</div>
+                    </div>
+                    <button type="button" class="el-button el-button--primary el-button--small mart3 marl20 is-disabled"><span>获取短信验证码</span></button>
+                    <button type="button" class="el-button el-button--primary el-button--small mart3"><span>获取语音验证码</span></button>
+                </div>
+                <a href="#" class="el-button el-button--primary width-160 mart20"><span>确定转出</span></a>
+            </form>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

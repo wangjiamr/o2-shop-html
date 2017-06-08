@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">统计</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form el-form--inline clearfix">
+                    <button type="button" class="el-button el-button--primary el-button--small mart5 width-80"><span>最近7天</span></button>
+                    <button type="button" class="el-button el-button--grey el-button--small mart5 width-80"><span>近30天</span></button>
+                    <button type="button" class="el-button el-button--grey el-button--small mart5 width-80"><span>半年</span></button>
+                    <button type="button" class="el-button el-button--grey el-button--small mart5 width-80"><span>年</span></button>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:50px;">开始</label>
+                        <div class="el-form-item__content" style="margin-left:50px;">
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-120">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width: 50px;">结束</label>
+                        <div class="el-form-item__content" style="margin-left: 50px;">
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-120">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar floatright">
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-60"><span>搜索</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <table class="table_cell mart10">
+                <colgroup>
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="15%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>已支付订单数（笔）</th>
+                    <th>发货订单数（笔）</th>
+                    <th>退货订单数（笔）</th>
+                    <th>退款订单数（笔）</th>
+                    <th>总销售额（元）</th>
+                    <th>退款总额（元）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>10283</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="admin_box mart20 clearfix">
+                <p>销售订单趋势图</p>
+                <div class="mart20">w</div>
+            </div>
+            <div class="admin_box mart20 clearfix">
+                <p>销售额趋势图</p>
+                <div class="mart20">w</div>
+            </div>
+            <table class="table_cell mart10">
+                <colgroup>
+                    <col width="10%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="15%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>已支付订单数（笔）</th>
+                    <th>发货订单数（笔）</th>
+                    <th>退货订单数（笔）</th>
+                    <th>退款订单数（笔）</th>
+                    <th>总销售额（元）</th>
+                    <th>退款总额（元）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2017.1.9</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,000,000</td>
+                    <td>10283</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

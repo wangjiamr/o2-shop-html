@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>评价管理</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:80px;background: #0085d7;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;color: #fff!important;}
+        .col-1{width:110px;}
+        .col-2{width:380px;}
+        .col-3{width:100px;}
+        .col-4{width:170px;}
+        .col-5{width:80px;}
+        .pj_box .tb_add_class,.pj_table th,.pj_table td{border: 1px solid #e0e0e0;}
+        .pj_box .tb_add_class thead th,.pj_table th{color:#333;height: 50px;background: #fafafa;text-indent: 10px;}
+        .pj_box .tb_add_class thead tr{border: 1px solid #e0e0e0;}
+        .pj_box .tb_add_class tbody td{padding:10px;border-bottom: 1px solid #e0e0e0;vertical-align: top;}
+        .pj_box .tb_add_class tbody td p{line-height:18px;}
+        .pj_box .tb_add_class tbody td .btn-theme{width:50px;height: 26px;line-height:26px;}
+        .pj_box .tb_add_class thead th select{width: 98px;height: 22px;border: 1px solid #e0e0e0;}
+        .pj_box .el-rate__item,.pj_table .el-rate__item{width: 14px;}
+        .pj_box .el-rate__icon,.pj_table .el-rate__icon{font-size: 14px;}
+        .pj_table th,.pj_table td{height:38px;text-align: center;color: #333;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#" class="current">评价管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <table class="pj_table" width="100%">
+            <thead>
+                <tr>
+                    <th>评分</th>
+                    <th>最近一周</th>
+                    <th>最近一个月</th>
+                    <th>最近三个月</th>
+                    <th>最近半年</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                        </div>
+                    </td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mart40 pj_box clearfix">
+            <table class="tb_add_class mart10" width="100%">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        <select>
+                            <option>评价</option>
+                        </select>
+                        <select>
+                            <option>有评论</option>
+                        </select>
+                    </th>
+                    <th>买家</th>
+                    <th>宝贝信息</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="color_3">枕头很棒，虽然还没用，按压了一下回弹效果很不错，一个字 ~棒！听评
+                            论说有很重的气味，没到手之前还挺忐忑的，拿到手了觉得还好啊，可以
+                            接受，洗一下就没有味了。挺舒服的，也很软，回弹效果也不错。购买前
+                            一直问客服问题，他家的客服一直耐心的给我解答，客服态度特别好，帮
+                            我解决问题。总体来说 ~很棒，物超所值，尤其是外面套是带拉链的，可
+                            以拿下来洗，这个很方便，用了超级舒服，值得购买，以后还会买。</p>
+                        <p class="color_8 mart5">[2016-12-17  16:33]</p>
+                    </td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td>
+                        <p class="color_3">巨氧超宝 汽车头枕护颈枕垫车用U型枕靠居家旅行头枕融暄天竺棉 条纹四色可.</p>
+                    </td>
+                    <td><a href="#" class="btn btn-theme">回复</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="color_3">枕头很棒，虽然还没用，按压了一下回弹效果很不错，一个字 ~棒！听评
+                            论说有很重的气味，没到手之前还挺忐忑的，拿到手了觉得还好啊，可以
+                            接受，洗一下就没有味了。挺舒服的，也很软，回弹效果也不错。购买前
+                            一直问客服问题，他家的客服一直耐心的给我解答，客服态度特别好，帮
+                            我解决问题。总体来说 ~很棒，物超所值，尤其是外面套是带拉链的，可
+                            以拿下来洗，这个很方便，用了超级舒服，值得购买，以后还会买。</p>
+                        <p class="color_8 mart5">[2016-12-17  16:33]</p>
+                    </td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td>
+                        <p class="color_3">巨氧超宝 汽车头枕护颈枕垫车用U型枕靠居家旅行头枕融暄天竺棉 条纹四色可.</p>
+                    </td>
+                    <td><a href="#" class="btn btn-theme">回复</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="color_3">枕头很棒，虽然还没用，按压了一下回弹效果很不错，一个字 ~棒！听评
+                            论说有很重的气味，没到手之前还挺忐忑的，拿到手了觉得还好啊，可以
+                            接受，洗一下就没有味了。挺舒服的，也很软，回弹效果也不错。购买前
+                            一直问客服问题，他家的客服一直耐心的给我解答，客服态度特别好，帮
+                            我解决问题。总体来说 ~很棒，物超所值，尤其是外面套是带拉链的，可
+                            以拿下来洗，这个很方便，用了超级舒服，值得购买，以后还会买。</p>
+                        <p class="color_8 mart5">[2016-12-17  16:33]</p>
+                    </td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td>
+                        <p class="color_3">巨氧超宝 汽车头枕护颈枕垫车用U型枕靠居家旅行头枕融暄天竺棉 条纹四色可.</p>
+                    </td>
+                    <td><a href="#" class="btn btn-theme">回复</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="el-rate">
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                            <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="color_3">枕头很棒，虽然还没用，按压了一下回弹效果很不错，一个字 ~棒！听评
+                            论说有很重的气味，没到手之前还挺忐忑的，拿到手了觉得还好啊，可以
+                            接受，洗一下就没有味了。挺舒服的，也很软，回弹效果也不错。购买前
+                            一直问客服问题，他家的客服一直耐心的给我解答，客服态度特别好，帮
+                            我解决问题。总体来说 ~很棒，物超所值，尤其是外面套是带拉链的，可
+                            以拿下来洗，这个很方便，用了超级舒服，值得购买，以后还会买。</p>
+                        <p class="color_8 mart5">[2016-12-17  16:33]</p>
+                    </td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td>
+                        <p class="color_3">巨氧超宝 汽车头枕护颈枕垫车用U型枕靠居家旅行头枕融暄天竺棉 条纹四色可.</p>
+                    </td>
+                    <td><a href="#" class="btn btn-theme">回复</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

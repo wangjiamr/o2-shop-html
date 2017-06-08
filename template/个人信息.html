@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .user_img img{width: 160px;height:160px;vertical-align: bottom;}
+        .user_img_100,.user_img_100 img{width: 100px;}
+        .user_img_30{width:60px;}
+        .user_img_30 img{width: 30px;}
+        .per_info_left{width:530px;}
+        .per_info_right{width:400px;}
+        .info_box{padding: 20px;height:420px;}
+        .p_price{line-height: 30px;}
+        .p_price a.btn-theme{width:100px;height:30px;line-height:30px;}
+        .p_price a.btn-theme input{position: absolute;width: 100px;height: 30px;left: 0;top:0;text-indent: -999px;font-size: 0;outline: 0;}
+        .info_box .el-input{width: 160px;}
+        .info_box .el-form-item__label{font-size: 12px;color: #888;text-align: right;padding-top: 6px;}
+        .info_box .el-input .el-input__inner{border-radius: 0;border-color:#e0e0e0;height: 28px;line-height: 28px;font-size: 12px;}
+        .info_box .el-form-item__error,.info_box .el-form-item__info{top:3px;left: 170px;}
+        .el-form-item__content{line-height: 24px;}
+        .el-radio__inner{width: 14px;height: 14px;}
+        .el-radio span{padding:0;}
+        .el-form-item_select{width: 70px;}
+        .item_bg{background: #fff8f8;padding:20px 20px;line-height: 24px;color:#514848;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart nobg floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人信息</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#" class="current">个人信息</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">账户安全</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">支付安全</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">常用地址</a></dt>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="mart30 clearfix">
+            <div class="per_info_left floatleft">
+                <p class="p_price font14">基本信息</p>
+                <div class="info_box mart10">
+                    <form class="el-form mart20">
+                        <div class="el-form-item is-error">
+                            <div class="el-form-item__label " style="width: 110px;">用户名：</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner noborder" readonly value="251244721"></div>
+                                <div class="el-form-item__error"></div>
+                            </div>
+                        </div>
+                        <div class="el-form-item is-required is-error has-error">
+                            <div class="el-form-item__label " style="width: 110px;">登录名：</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value="251244721"></div>
+                                <div class="el-form-item__error">错误信息</div>
+                            </div>
+                        </div>
+                        <div class="el-form-item is-required">
+                            <div class="el-form-item__label" style="width: 110px;">昵称：</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value="不爱吃鱼的猫"></div>
+                                <div class="el-form-item__error">错误信息</div>
+                            </div>
+                        </div>
+                        <div class="el-form-item is-required">
+                            <label class="el-form-item__label" style="width: 110px;">性别</label>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-radio-group">
+                                    <label class="el-radio">
+                                        <span class="el-radio__input">
+                                            <span class="el-radio__inner is-checked"></span>
+                                            <input type="radio" class="el-radio__original" value="线上品牌商赞助">
+                                        </span>
+                                        <span class="el-radio__label">男</span>
+                                    </label>
+                                    <label class="el-radio">
+                                        <span class="el-radio__input">
+                                            <span class="el-radio__inner"></span>
+                                            <input type="radio" class="el-radio__original" value="线上品牌商赞助">
+                                        </span>
+                                        <span class="el-radio__label">女</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-form-item">
+                            <div class="el-form-item__label" style="width: 110px;">生日：</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <select class="el-form-item_select">
+                                    <option>1988</option>
+                                    <option>1987</option>
+                                    <option>1986</option>
+                                    <option>1985</option>
+                                    <option>1984</option>
+                                </select>
+                                <span class="font12">年</span>
+                                <select class="el-form-item_select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <span class="font12">月</span>
+                                <select class="el-form-item_select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <span class="font12">日</span>
+                            </div>
+                        </div>
+                        <div class="el-form-item is-required">
+                            <div class="el-form-item__label " style="width: 110px;">邮箱</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value="251244721@qq.com"></div>
+                                <div class="el-form-item__info"><a href="#" class="color_theme">立即验证</a></div>
+                                <div class="el-form-item__error">错误信息</div>
+                            </div>
+                        </div>
+                        <div class="el-form-item is-required">
+                            <div class="el-form-item__label " style="width: 110px;">真实姓名</div>
+                            <div class="el-form-item__content" style="margin-left: 110px;">
+                                <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value="王大锤"></div>
+                                <div class="el-form-item__error">错误信息</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="per_info_right floatleft marl40">
+                <p class="p_price font14 clearfix">
+                    <span>头像信息</span>
+                    <a href="#" class="btn btn-theme font12 relative floatright">点击上传头像<input type="file"></a>
+                </p>
+                <div class="info_box color_8 mart10">
+                    <p>仅支持JPG、GIF、PNG、JPEG、BMP格式，文件小于4M</p>
+                    <div class="item_bg aligncenter mart20 user_img"><img src="../img/p_img/user.jpg"></div>
+                    <p class="mart20">你上传的图片会自动生成2种尺寸，请注意小尺寸的头像是否清晰</p>
+                    <div class="mart20 aligncenter">
+                        <div class="user_img_100 inlineblock">
+                            <p><img src="../img/p_img/user.jpg"></p>
+                            <p class="color_8 mart10">100*100像素</p>
+                        </div>
+                        <div class="user_img_30 inlineblock marl30">
+                            <p><img src="../img/p_img/user.jpg"></p>
+                            <p class="color_8 mart10">30*30像素</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="aligncenter"><a href="#" class="btn btn-theme font14 mart30">保存修改</a></p>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

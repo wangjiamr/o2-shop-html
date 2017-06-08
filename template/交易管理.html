@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>交易管理</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{background: #0085d7;}
+        .header_main .el-input__inner{width:260px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{color: #fff;border: 0;}
+        .p_price{line-height: 30px;}
+        .p_price a.btn-theme{width:100px;height:30px;line-height:30px;}
+        .p_price a.btn-theme input{position: absolute;width: 100px;height: 30px;left: 0;top:0;text-indent: -999px;font-size: 0;outline: 0;}
+        .el-form-item__content{line-height: 24px;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;}
+        .btn-take{height: 22px;line-height: 22px;background: none;}
+        .col-1{width:340px;}
+        .col-2{width:90px;}
+        .col-3{width:90px;}
+        .col-4{width:90px;}
+        .col-5{width:90px;}
+        .col-6{width:100px;}
+        .col-7{width:90px;}
+        .tb_add_class{border: 1px solid #e0e0e0;}
+        .tb_add_class thead th{color:#333;height: 50px;background: #fafafa;padding-left: 20px;}
+        .tb_add_class thead tr{border: 1px solid #e0e0e0;}
+        .tb_add_class tbody td{padding:10px 0 10px 20px;border-bottom: 1px solid #e0e0e0;}
+        .tb_add_class input{width:178px;height: 24px;border: 1px solid #e0e0e0;outline: 0;text-indent: 5px;vertical-align: middle;}
+        .tb_add_class input:focus,.el-checkbox__inner:hover{border-color: #0085d7!important;}
+        .tb_add_class tbody td i.iconfont{font-size:20px;font-weight:bold;margin: 0 3px;cursor: pointer;}
+        .tb_add_class tbody td .btn-theme{width:100px;height: 26px;line-height:26px;}
+        .class_nav a{color: #333;margin-right: 10px;line-height: 30px;}
+        .class_nav a.current,.class_nav a:hover,.tb_add_class tbody td a:hover{color: #0085d7;}
+        .el-checkbox__inner.is-checked{background:#0085d7;border-color:#0085d7;}
+        .item_bg{background: #fafafa;padding:15px;}
+        .item_bg .el-input{width: 160px;}
+        .item_bg .el-form-item__label{font-size: 12px;color: #888;text-align: right;padding-top: 6px;}
+        .item_bg .el-input .el-input__inner,.item_bg .el-date-editor__editor{border-radius: 0;border-color:#e0e0e0;height: 28px;line-height: 28px;font-size: 12px;}
+        .item_bg .el-form-item{width:40%;height: 24px;}
+        .item_bg .el-form_inner{height:170px;}
+        .item_bg .el-form-item__label{font-size: 12px;color: #333;text-align: left;}
+        .item_bg .el-date-editor{width:100px;height: 24px;}
+        .item_bg .el-date-editor__trigger.el-icon{line-height: 29px;right: 5px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:260px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#" class="current">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">评价管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="item_bg">
+            <form class="el-form">
+                <div class="el-form_inner clearfix">
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label " style="width:60px;">商品编码</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label" style="width: 60px;">商品名称</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label" style="width: 60px;">成交时间</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-date-editor el-input el-date-editor--date">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span>-</span>
+                            <div class="el-date-editor el-input el-date-editor--date">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label " style="width: 60px;">订单状态</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-select">
+                                <div class="el-input">
+                                    <i class="el-input__icon el-icon-caret-top"></i>
+                                    <input type="text" placeholder="" readonly="readonly" autocomplete="off" class="el-input__inner">
+                                </div>
+                                <div class="resize-triggers">
+                                    <div class="expand-trigger">
+                                        <div style="width: 151px; height: 37px;"></div>
+                                    </div>
+                                    <div class="contract-trigger"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label " style="width:60px;">买家名称</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label" style="width: 60px;">评价状态</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label " style="width:60px;">交易编号</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label color_grey" style="width:60px;">清空条件</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <a href="#" class="btn btn-take font12">搜索</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="mart20 clearfix">
+            <p class="p_price font14 alignright clearfix" style="height: 30px;">
+                <span class="class_nav floatleft">
+                    <a href="#" class="current">最近的订单</a>
+                    <a href="#">等待买家付款</a>
+                    <a href="#">待发货</a>
+                    <a href="#">已发货</a>
+                    <a href="#">退款中</a>
+                    <a href="#">待评价</a>
+                    <a href="#">已完成</a>
+                    <a href="#">关闭的订单</a>
+                </span>
+            </p>
+            <table class="tb_add_class mart10" width="100%">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                    <col class="col-6">
+                    <col class="col-7">
+                    <col class="col-8">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>实收金额</th>
+                    <th>买家</th>
+                    <th>交易状态</th>
+                    <th>交易操作</th>
+                    <th>评价</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="order_one marr20 clearfix">
+                            <span class="order_img floatleft marr10"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                            <p class="p_top10">
+                                <span class="color_8">分类：U型枕</span>
+                                <span class="color_8">颜色：蓝色</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td><span class="color_3">￥299.00</span></td>
+                    <td><span class="color_8">2</span></td>
+                    <td><span class="color_3">234</span></td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td><span class="color_8">未发货</span></td>
+                    <td><a href="#" class="btn btn-take">发货</a></td>
+                    <td><span class="color_8">未评</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="order_one marr20 clearfix">
+                            <span class="order_img floatleft marr10"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕</a></p>
+                            <p class="p_top10">
+                                <span class="color_8">分类：U型枕</span>
+                                <span class="color_8">颜色：蓝色</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td><span class="color_3">￥299.00</span></td>
+                    <td><span class="color_8">2</span></td>
+                    <td><span class="color_3">234</span></td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td><span class="color_8">未发货</span></td>
+                    <td></td>
+                    <td><span class="color_8">未评</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="order_one marr20 clearfix">
+                            <span class="order_img floatleft marr10"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕</a></p>
+                            <p class="p_top10">
+                                <span class="color_8">分类：U型枕</span>
+                                <span class="color_8">颜色：蓝色</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td><span class="color_3">￥299.00</span></td>
+                    <td><span class="color_8">2</span></td>
+                    <td><span class="color_3">234</span></td>
+                    <td><span class="color_8">不****猫</span></td>
+                    <td><span class="color_8">未发货</span></td>
+                    <td><a href="#" class="btn btn-take">退款</a></td>
+                    <td><span class="color_8">未评</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

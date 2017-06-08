@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style type="text/css">
+        .breadcrumb_out,.price-box{background: #fafafa;height: 50px;line-height: 50px;}
+        .breadcrumb_out .breadcrumb,.breadcrumb_right{margin: 0 auto;height: 50px;line-height: 50px;}
+        .breadcrumb_right a{display: inline-block;height: 28px;line-height: 28px;border:1px solid transparent;border-radius: 3px;padding:0 10px;}
+        .breadcrumb_right a:hover{color: #74ba29;border-color:#74ba29;}
+        .breadcrumb_right a i{margin-right: 5px;}
+        .breadcrumb_right a.favored i:before{color:#d44b4b;content: '\e64b'}
+        .show_big_img{width: 500px;height:500px;border:1px solid #e0e0e0;}
+        .p_left img{vertical-align: bottom;}
+        .show_mini_img{width: 82px;}
+        .show_mini_img li{width: 80px;height: 80px;border:1px solid #e0e0e0;margin-top: 8px;cursor: pointer;}
+        .show_mini_img li:hover,.show_mini_img li.current{border-color:#74ba29;}
+        .show_mini_img li img{width: 80px;height: 80px;}
+        .show_mini_btn{display: block;width:100%;height: 23px;line-height: 23px;text-align: center;color: #dfdfdf;}
+        .show_mini_btn:hover{color: #74ba29;}
+        .show_img_hidden{width:82px;height: 450px;overflow: hidden;}
+        .show_big{width: 36px;height: 36px;line-height:36px;background: url("../img/mask50.png") repeat;position: absolute;right:0;bottom:0;color: #fafafa;}
+        .p_right{width:570px;}
+        .p_right .title{line-height: 20px;}
+        .price-box{height: auto;}
+        .span_l{width:75px;text-indent:15px;}
+        .time_evaluate{width: 160px;position: absolute;top:10px;right:10px;}
+        .time_evaluate div{width:49%;height:30px;line-height:16px;border-right:1px solid #e0e0e0;float: left;}
+        .p_check_box{border:1px dotted #e0e0e0;border-width:1px 0;padding: 20px 0;}
+        .p_right table th{vertical-align: text-top;padding-top:8px;}
+        /*.p_check_box .span_l{height:36px;}*/
+        .choose_list li img{height:36px;vertical-align: middle;}
+        .choose_list li{min-width:70px;border:1px solid #e0e0e0;float: left;padding: 0 10px 0 0;line-height: 30px;color: #333;margin:0 12px 5px 0;}
+        .choose_list li:hover,.choose_list li.current{border-color:#74ba29;cursor: pointer;}
+        .choose_list li.sale_off,.choose_list li.sale_off:hover{border:1px dashed #e0e0e0;cursor: default;color: #b0b0b0;}
+        .choose_color li{text-align: center;min-width:50px;padding: 0 10px;}
+        .p_right .pay_table th,.p_right .pay_table td{position: relative;padding-top: 0;}
+        .line_items li{display: inline-block;float: left;padding:0 4px;cursor: pointer;}
+        .line_items li em{display: inline-block;width: 2px;height:14px;background: #e0e0e0;transition: 0.2s;}
+        .line_items li:hover em,.line_items li.now em{transform:scale(1.5);}
+        .line_items li.line1:hover em,.line_items li.line1.current em{background: #1d825b;}
+        .line_items li.line2:hover em,.line_items li.line2.current em{background: #208459;}
+        .line_items li.line3:hover em,.line_items li.line3.current em{background: #248757;}
+        .line_items li.line4:hover em,.line_items li.line4.current em{background: #298a54;}
+        .line_items li.line5:hover em,.line_items li.line5.current em{background: #2e8d51;}
+        .line_items li.line6:hover em,.line_items li.line6.current em{background: #35914d;}
+        .line_items li.line7:hover em,.line_items li.line7.current em{background: #3b954a;}
+        .line_items li.line8:hover em,.line_items li.line8.current em{background: #429946;}
+        .line_items li.line9:hover em,.line_items li.line9.current em{background: #489e42;}
+        .line_items li.line10:hover em,.line_items li.line10.current em{background: #4fa23e;}
+        .line_items li.line11:hover em,.line_items li.line11.current em{background: #3f9848;}
+        .line_items li.line12:hover em,.line_items li.line12.current em{background: #3b9649;}
+        .line_items li.line13:hover em,.line_items li.line13.current em{background: #429a46;}
+        .line_items li.line14:hover em,.line_items li.line14.current em{background: #67b230;}
+        .line_items li.line15:hover em,.line_items li.line15.current em{background: #6cb52e;}
+        .line_items li.line16:hover em,.line_items li.line16.current em{background: #3f9848;}
+        .line_items li.line17:hover em,.line_items li.line17.current em{background: #429a46;}
+        .line_items li.line18:hover em,.line_items li.line18.current em{background: #439b44;}
+        .line_items li.line19:hover em,.line_items li.line19.current em{background: #489d42;}
+        .line_items li.line20:hover em,.line_items li.line20.current em{background: #4a9f41;}
+        .line_items li.line21:hover em,.line_items li.line21.current em{background: #4ca040;}
+        .line_items li.line22:hover em,.line_items li.line22.current em{background: #4ea33e;}
+        .line_items li.line23:hover em,.line_items li.line23.current em{background: #52a53d;}
+        .line_items li.line24:hover em,.line_items li.line24.current em{background: #52a53d;}
+        .line_items li.line25:hover em,.line_items li.line25.current em{background: #55a73b;}
+        .line_items li.line26:hover em,.line_items li.line26.current em{background: #58a839;}
+        .line_items li.line27:hover em,.line_items li.line27.current em{background: #5ba939;}
+        .line_items li.line28:hover em,.line_items li.line28.current em{background: #5daa36;}
+        .line_items li.line29:hover em,.line_items li.line29.current em{background: #5eac34;}
+        .line_items li.line30:hover em,.line_items li.line30.current em{background: #60ae34;}
+        .line_items li.line31:hover em,.line_items li.line31.current em{background: #64b032;}
+        .line_items li.line32:hover em,.line_items li.line32.current em{background: #66b130;}
+        .line_items li.line33:hover em,.line_items li.line33.current em{background: #68b430;}
+        .line_items li.line34:hover em,.line_items li.line34.current em{background: #6bb42f;}
+        .line_items li.line35:hover em,.line_items li.line35.current em{background: #6db52f;}
+        .line_items li.line36:hover em,.line_items li.line36.current em{background: #6eb62c;}
+        .line_items li.line37:hover em,.line_items li.line37.current em{background: #70b72b;}
+        .line_items li.line38:hover em,.line_items li.line38.current em{background: #71b82c;}
+        .line_items li.line39:hover em,.line_items li.line39.current em{background: #72b92b;}
+        .line_items li.line40:hover em,.line_items li.line40.current em{background: #74b92a;}
+        .p_btn_box{border-top:1px dotted #e0e0e0;padding-top: 20px;}
+        .el-input-number{width: 50px;height: 44px;border: 1px solid #e0e0e0;}
+        .el-input-number .el-input,.el-input-number .el-input__inner{width: 29px;height: 44px;padding: 0;border: 0!important;}
+        .el-input-number span{display: inline-block;color: #666;}
+        .el-input-number span:hover{color: #74ba29;}
+        .el-input-number span.el-input-number__decrease{width: 20px;height: 22px;line-height:22px;right: 0;top:0;}
+        .el-input-number span.el-input-number__increase{width: 20px;height: 21px;line-height:21px;border-top:1px solid #e0e0e0;right: 0;top:22px;}
+        .p_btn_box .btn{width: 150px;height: 46px;line-height: 46px;color: #fff;}
+        .btn_buy{background: #74ba29;}
+        .btn_add_cart{background: #f3b625;}
+        .detail_tab{border-bottom:2px solid #e0e0e0;}
+        .detail_tab a{display: inline-block;width:160px;line-height: 40px;text-align: center;border-bottom:1px solid #e0e0e0;position: relative;bottom: -2px;}
+        .detail_tab a.current{color: #75bb29;border-bottom:2px solid #75bb29;}
+        .div_items{padding: 30px 0;}
+        .div_detail{width: 800px;margin: 0 auto;}
+        .table_detail th,.table_detail td{height: 40px;border-bottom: 1px dotted #e0e0e0;color: #888;}
+        .table_detail th{width: 130px;}
+        .table_detail td{color: #333;}
+        .detail_img img{max-width: 100%;vertical-align: bottom;margin-top:20px;}
+        .guarantee .title{line-height:38px;border:1px solid #e0e0e0;}
+        .serve-agree-bd dt{display: block;height: 32px;line-height: 32px;}
+        .serve-agree-bd dt em{float: left;margin-right: 10px;}
+        .serve-agree-bd dd{padding:10px 0 30px 42px;line-height: 18px;}
+        .comment-info .comment-percent{width:110px;padding: 15px 0 0 0;}
+        .comment-info .percent-con{line-height: 120%;}
+        .comment-info .percent-info{margin-left:110px;}
+        .tag-list span{display: inline-block;line-height: 24px;padding: 0 9px;border: 1px solid #e0e0e0;border-radius:2px;color: #888;margin: 0 5px 10px 0;}
+        .ETab div.small{height: 50px;line-height: 50px;background: #fafafa;}
+        .el-radio__label{font-size: 12px;}
+        .el-radio__inner{width: 14px;height: 14px;}
+        .el-radio__inner.is-checked{background: #75bb29;border-color: #75bb29;}
+        .el-radio__inner:hover,.el-radio:hover .el-radio__inner{border-color: #75bb29!important;}
+        .el-radio:hover,.el-radio.current{color: #75bb29;}
+        .comment-item{padding:20px;border-bottom:1px solid #e0e0e0;}
+        .comment-item .user-info{white-space:nowrap;text-overflow:ellipsis;overflow: hidden;}
+        .comment-item .user-info img{width: 30px;height: 30px;border-radius: 50%;vertical-align: middle;margin-right: 10px;}
+        .user-column{width: 140px;}
+        .comment-column{margin-left: 150px;}
+        .comment-con{padding:10px 0;color: #333;font-size: 14px;line-height: 140%;}
+        .comment-item .pic-list img{width:50px;height: 50px;border: 1px solid #e2e2e2;margin-right: 6px;}
+        .order-info span{padding-right: 10px;}
+        .comment-con2{border: 1px dotted #e0e0e0;border-width:1px 0;padding: 10px 0;line-height:18px;margin: 10px 0;}
+        .comment-con3{line-height:18px;}
+        .balance{position:absolute;border: 1px solid #e0e0e0;line-height:38px;background: #fff;z-index:3;width: 170px;padding-left: 10px;box-shadow: 0 0 10px rgba(46, 73, 61, .15);left: 120px;text-align: left;}
+        .balance p:first-child{border-bottom:1px dotted #e0e0e0;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>andyzhao</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+            <ul class="header_nav lthei mart45 floatleft font16 clearfix">
+                <li><a href="#">首页<span></span></a></li>
+                <li class="current"><a href="#">生态产品<span></span></a></li>
+                <li><a href="#">生活用品<span></span></a></li>
+                <li class="noborder"><a href="#">日常用品<span></span></a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart25" style="width:356px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<!--商品详情begin-->
+<div class="breadcrumb_out lthei">
+    <div class="content clearfix">
+        <div class="breadcrumb color_8 floatleft">
+            <a href="#">首页</a>
+            <span>&gt;</span>
+            <a href="#">生态产品</a>
+            <span>&gt;</span>
+            <a href="#">居家用品</a>
+            <span>&gt;</span>
+            <a href="#">巨氧超宝 护腰带 腰间盘突出磁疗自发热护腰托钢板男女士 保暖</a>
+        </div>
+        <div class="breadcrumb_right floatright">
+            <a href="#"><i class="iconfont icon-shoplight"></i>巨氧超宝旗舰店</a>
+            <a href="#"><i class="iconfont icon-communityfill"></i>联系客服</a>
+            <a href="#" class="favored" title="已收藏加favored"><i class="iconfont icon-favor"></i>取消收藏</a>
+        </div>
+    </div>
+</div>
+<div class="content mart20 clearfix">
+    <!--商品缩略图begin-->
+    <div class="p_left floatleft">
+        <div class="clearfix">
+            <div class="show_big_img relative floatleft">
+                <div class="show_big aligncenter font18"><i class="el-icon-search"></i></div>
+                <p><img src="../img/p_img/p_500_500_1.jpg"></p>
+            </div>
+            <div class="show_mini_img relative floatleft marl10">
+                <a href="#" class="show_mini_btn btn_up font22 strong"><i class="el-icon-arrow-up"></i></a>
+                <div class="show_img_hidden">
+                    <ul class="relative" style="top: -90px;" title="挪动一个是82px+8">
+                        <li><img src="../img/p_img/p_80_80_1.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_2.jpg"></li>
+                        <li class="current"><img src="../img/p_img/p_80_80_3.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_4.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_5.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_1.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_2.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_3.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_4.jpg"></li>
+                        <li><img src="../img/p_img/p_80_80_5.jpg"></li>
+                    </ul>
+                </div>
+                <a href="#" class="show_mini_btn btn_down font22 strong mart5"><i class="el-icon-arrow-down"></i></a>
+            </div>
+        </div>
+        <p class="mart20">
+            <a href="#"><i class="iconfont icon-likefill"></i> 已收藏</a>
+            <a href="#" class="marl10"><i class="el-icon-share"></i> 分享链接</a>
+        </p>
+    </div>
+    <!--商品缩略图over-->
+    <div class="p_right floatright">
+        <p class="title color_3 lthei font18">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠 居家旅行头枕 融暄天竺棉 条纹四色可选</p>
+        <p class="color_9 mart10 lthei">色纺针织条纹，100%天竺棉四季通用、环保透气材质、舒适承托、均匀支撑，套装组合！</p>
+        <div class="price-box lthei mart10 relative">
+            <p>
+                <span class="span_l inlineblock color_8">售价</span>
+                <span class="p_price font16 strong">￥<span class="font22">199.00</span> － <span class="font22">299.00</span></span>
+            </p>
+            <p>
+                <span class="span_l inlineblock color_8">优惠</span>
+                <span class="color_3">使用优氧币可享受<em class="color_buy">9.5</em>折优惠</span>
+            </p>
+            <div class="time_evaluate aligncenter clearfix">
+                <div>
+                    <p class="font14 color_3">15:43:13</p>
+                    <p class="font12 color_8"><a href="#">价格刷新</a></p>
+                </div>
+                <div class="noborder">
+                    <p class="font14 color_3">17.2万</p>
+                    <p class="font12 color_8"><a href="#">累计评价</a></p>
+                </div>
+            </div>
+        </div>
+        <p class="mart10">
+            <span class="span_l inlineblock color_8">配送</span>
+            <span class="color_3">满200元免运费</span>
+        </p>
+        <div class="p_check_box clearfix mart10">
+            <table width="100%">
+                <tr>
+                    <th width="75"><span class="span_l inlineblock floatleft color_8">类型</span></th>
+                    <td>
+                        <ul class="choose_list clearfix">
+                            <li><img src="../img/p_img/p_white_230_140_1.jpg"><span>u型枕</span></li>
+                            <li><img src="../img/p_img/p_white_230_140_2.jpg"><span>靠枕</span></li>
+                            <li class="sale_off"><img src="../img/p_img/p_white_230_140_3.jpg"><span>头枕＋靠枕套装</span></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" class="mart10">
+                <tr>
+                    <th width="75"><span class="span_l inlineblock floatleft color_8">颜色</span></th>
+                    <td>
+                        <ul class="choose_list choose_color clearfix aligncenter">
+                            <li class="current"><span>白色</span></li>
+                            <li><span>红色</span></li>
+                            <li class="sale_off"><span>紫色</span></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="pay_table mart10" width="100%" class="mart10">
+            <tr>
+                <th width="75"><span class="span_l inlineblock color_8">余额抵扣</span></th>
+                <td>
+                    <div class="clearfix alignright relative">
+                        <span class="color_3 floatleft">可用余额：<span class="p_price">23,678.00</span><i class="iconfont icon-rechargefill p_price marl5"></i></span>
+                        <span class="color_8">CYN:O2<span class="color_0 font14 marl5">19.8333:1</span></span>
+                        <div class="balance">
+                            <p>账户余额：<span class="color_3">23,678.00</span></p>
+                            <p>返利余额：：<span class="color_3">1233.00</span></p>
+                        </div>
+                    </div>
+                    <div class="mart10 color_8">
+                        使用余额
+                        <div class="inline-input inlineblock el-input el-input--mini" style="width:80px;">
+                            <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                        </div>
+                        可抵扣<em class="color_3">￥199</em>，实付<em class="p_price">￥100</em>
+                    </div>
+                    <div class="mart20 clearfix">
+                        <span class="floatleft">不抵扣</span>
+                        <ul class="line_items clearfix floatleft marr10 marl10">
+                            <li class="line1 current"><em></em></li>
+                            <li class="line2 current"><em></em></li>
+                            <li class="line3 current"><em></em></li>
+                            <li class="line4 current"><em></em></li>
+                            <li class="line5 current"><em></em></li>
+                            <li class="line6 current"><em></em></li>
+                            <li class="line7 current"><em></em></li>
+                            <li class="line8 current"><em></em></li>
+                            <li class="line9 current"><em></em></li>
+                            <li class="line10 current"><em></em></li>
+                            <li class="line11 current"><em></em></li>
+                            <li class="line12 current"><em></em></li>
+                            <li class="line13 current now"><em></em></li>
+                            <li class="line14"><em></em></li>
+                            <li class="line15"><em></em></li>
+                            <li class="line16"><em></em></li>
+                            <li class="line17"><em></em></li>
+                            <li class="line18"><em></em></li>
+                            <li class="line19"><em></em></li>
+                            <li class="line20"><em></em></li>
+                            <li class="line21"><em></em></li>
+                            <li class="line22"><em></em></li>
+                            <li class="line23"><em></em></li>
+                            <li class="line24"><em></em></li>
+                            <li class="line25"><em></em></li>
+                            <li class="line26"><em></em></li>
+                            <li class="line27"><em></em></li>
+                            <li class="line28"><em></em></li>
+                            <li class="line29"><em></em></li>
+                            <li class="line30"><em></em></li>
+                            <li class="line31"><em></em></li>
+                            <li class="line32"><em></em></li>
+                            <li class="line33"><em></em></li>
+                            <li class="line34"><em></em></li>
+                            <li class="line35"><em></em></li>
+                            <li class="line36"><em></em></li>
+                            <li class="line37"><em></em></li>
+                            <li class="line38"><em></em></li>
+                            <li class="line39"><em></em></li>
+                            <li class="line40"><em></em></li>
+                        </ul>
+                        <span>全额</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="p_btn_box mart10 clearfix">
+            <div class="el-input-number floatleft">
+                <div class="el-input">
+                    <input type="text" autocomplete="off" class="el-input__inner">
+                </div>
+                <span class="el-input-number__decrease el-icon-plus"></span>
+                <span class="el-input-number__increase el-icon-minus"></span>
+            </div>
+            <a href="#" class="btn lthei floatleft btn_buy marl15 marr20 font16">立即购买</a>
+            <a href="#" class="btn lthei floatleft btn_add_cart font16">加入购物车</a>
+        </div>
+    </div>
+</div>
+<div class="content mart50 lthei">
+    <div class="detail_tab font14">
+        <a href="javascript:;" class="current">商品介绍</a>
+        <a href="javascript:;">累计评价<span class="p_price">5000+</span></a>
+    </div>
+    <div class="div_items div_detail" title="商品介绍" style="display: ;">
+        <table class="table_detail" width="100%">
+            <tr>
+                <th>品牌</th>
+                <td>巨氧超宝</td>
+            </tr>
+            <tr>
+                <th>品名</th>
+                <td>天竺棉多功能颈枕</td>
+            </tr>
+            <tr>
+                <th>颜色</th>
+                <td>灰色、黑色、蓝色、绿色（可以两色搭配购买）</td>
+            </tr>
+            <tr>
+                <th>面料</th>
+                <td>色纺针织条纹 天竺棉100%</td>
+            </tr>
+            <tr>
+                <th>尺寸</th>
+                <td>约15.5X65cm</td>
+            </tr>
+            <tr>
+                <th>填充物</th>
+                <td>微粒子颗粒</td>
+            </tr>
+            <tr>
+                <th>洗涤说明</th>
+                <td><pre>洗涤说明洗涤说明洗涤说明洗涤说明洗涤说明洗涤说明</pre></td>
+            </tr>
+        </table>
+        <p class="detail_img aligncenter"><img src="https://img30.360buyimg.com/popWaterMark/jfs/t3838/285/2104973777/73328/7763b3d9/584cc0b4Nf6e26130.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWaterMark/jfs/t3514/167/2323279387/48293/2411ac3d/584cc0b5N03f5bc43.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3475/280/2381930176/68089/be337919/584f550bN5da28ab5.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3244/365/4522360969/63769/fc8d4b24/584f550bN21925190.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3217/156/4614765478/84301/302ec886/584f550cNf66d0531.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3133/220/4544017103/95518/e801d897/584f550cNfa08f726.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3850/327/2137912128/118404/5b0326bc/584f550cN224ee231.jpg"></p>
+        <p class="detail_img detail_img"><img src="https://img30.360buyimg.com/popWareDetail/jfs/t3850/327/2137912128/118404/5b0326bc/584f550cN224ee231.jpg"></p>
+        <div class="guarantee lthei mart40">
+            <p class="title aligncenter font14 color_3">售后保障</p>
+            <div class="serve-agree-bd mart30">
+                <dl>
+                    <dt class="clearfix">
+                        <em><img src="../img/g-1.png"></em>
+                        <span class="strong font16 p_price">厂家服务</span>
+                    </dt>
+                    <dd>
+                        本产品全国联保，享受三包服务，质保期为：巨氧超宝售后质保
+                    </dd>
+                    <dt class="clearfix">
+                        <em><img src="../img/g-1.png"></em>
+                        <span class="strong font16 p_price">巨氧超宝承诺</span>
+                    </dt>
+                    <dd>
+                        巨氧超宝平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！<br>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明<br>完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                    </dd>
+                    <dt class="clearfix">
+                        <em><img src="../img/g-1.png"></em>
+                        <span class="strong font16 p_price">正品行货</span>
+                    </dt>
+                    <dd>巨氧超宝商城向您保证所售商品均为正品行货，巨氧超宝自营商品开具机打发票或电子发票。</dd>
+                    <dt class="clearfix">
+                        <em><img src="../img/g-2.png"></em>
+                        <span class="strong font16 p_price">全国联保</span>
+                    </dt>
+                    <dd>
+                        凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由京东联系保修，享受法定三包售后服务），与您亲<br>临商场选购的商品享受相同的质量保证。巨氧超宝商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！<br><br>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明<br>完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="div_items div_evaluate" title="评价" style="display: none;">
+        <div class="comment-info J-comment-info clearfix">
+            <div class="comment-percent floatleft aligncenter">
+                <strong class="percent-tit color_8 font12">商品满意度</strong>
+                <div class="percent-con font48 p_price">4.5</div>
+            </div>
+            <div class="percent-info">
+                <div class="tag-list">
+                    <span>性价比高(4178)</span>
+                    <span>系统流畅(3995)</span>
+                    <span>外观漂亮(3976)</span>
+                    <span>功能齐全(3920)</span>
+                    <span>支持国产机(3425)</span>
+                    <span>反应快(3355)</span>
+                    <span>照相不错(3336)</span>
+                    <span>通话质量好(3172)</span>
+                    <span>国民手机(3147)</span>
+                    <span>分辨率高(3099)</span>
+                </div>
+            </div>
+        </div>
+        <div class="ETab mart20">
+            <div class="tab-main small">
+                <div class="el-radio-group marl20">
+                    <label class="el-radio current"><span class="el-radio__input"><span class="el-radio__inner is-checked"></span><input type="radio" class="el-radio__original"></span><span class="el-radio__label">全部评价（5000+）</span></label>
+                    <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" ></span><span class="el-radio__label">有图（136）</span></label>
+                    <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" ></span><span class="el-radio__label">追评（136）</span></label>
+                    <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" ></span><span class="el-radio__label">好评（3536）</span></label>
+                    <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" ></span><span class="el-radio__label">中评（743）</span></label>
+                    <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" ></span><span class="el-radio__label">差评（1）</span></label>
+                </div>
+            </div>
+            <div class="tab-con">
+                <div class="comment-box" title="全部评价">
+                    <div class="comment-item clearfix">
+                        <div class="user-column floatleft">
+                            <div class="user-info">
+                                <span><img src="../img/p_img/p_80_80_1.jpg"></span>
+                                <span class="color_3">张***1</span>
+                            </div>
+                            <div class="user-level color_8 mart10">
+                                <span>普通用户</span>
+                                <span>北京</span>
+                            </div>
+                        </div>
+                        <div class="comment-column">
+                            <div class="el-rate">
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            </div>
+                            <p class="comment-con">从荣耀3开始用华为手机，质量挺好，支持国产，荣耀7现在是第二次买了，包装挺别致的，手机反应快，电池听听歌看下新闻玩下微信一天下来还剩一两格电，基本够用。</p>
+                            <div class="tag-list">
+                                <span>性价比高(4178)</span>
+                                <span>系统流畅(3995)</span>
+                                <span>外观漂亮(3976)</span>
+                                <span>功能齐全(3920)</span>
+                            </div>
+                            <div class="pic-list">
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_1.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_2.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_3.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_4.jpg"></a>
+                            </div>
+                            <div class="order-info mart10">
+                                <span>2016-10-28 22:42</span>
+                                <span>类型：U型枕</span>
+                                <span>颜色：蓝色</span>
+                                <span class="p_price">来自巨氧超宝iphone客户端</span>
+                            </div>
+                            <div class="comment-con2">
+                                <p class="color_3 font14"><span class="color_8">［追加评论］</span>特地试用一天才来评价，真的很舒服，不是很硬也不是很软，刚刚好，是记忆棉的，压下去立马弹回来了，弹性十足，也适合午休用，卖家的服务相当好，
+                                    关键还可以拆洗，洗了也不掉色，最大的优点是还有一个内芯不过不可以放在太阳底下晒的，中午趴着睡觉也可以，非常实用，做工感觉也是不错的，没有什么味道，
+                                    颜色漂亮，是我喜欢的款式，而且也耐脏物流也很快，躺在床上看电视脖子也很轻松，这个u型枕头的设计很好，特别是后面有一点凸起，刚好适合头枕下去的角度，舒
+                                    适有弹性，面料不错，不扎人，很柔软，包装也很完美，赞！</p>
+                                <p class="mart5">确认收货后2天追加</p>
+                            </div>
+                            <p class="comment-con3 font14 color_buy">解释：亲的肯定和信赖让我们的执著更有了意义，亲的句句认可和肯定，真实的话语，让我们不由间又多了一份信心，也要谢谢亲在茫茫的淘海中，那短暂的停留小店，
+                                才会让我们遇见彼此，时间总能证明我们的相遇是对的，是值得的。不早不晚，恰是适时遇见的时候。亲的这般夸赞，我们视如珍宝，字字牢记心间。</p>
+                        </div>
+                    </div>
+                    <div class="comment-item clearfix">
+                        <div class="user-column floatleft">
+                            <div class="user-info">
+                                <span><img src="../img/p_img/p_80_80_2.jpg"></span>
+                                <span class="color_3">张***1</span>
+                            </div>
+                            <div class="user-level color_8 mart10">
+                                <span>普通用户</span>
+                                <span>北京</span>
+                            </div>
+                        </div>
+                        <div class="comment-column">
+                            <div class="el-rate">
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            </div>
+                            <p class="comment-con">从荣耀3开始用华为手机，质量挺好，支持国产，荣耀7现在是第二次买了，包装挺别致的，手机反应快，电池听听歌看下新闻玩下微信一天下来还剩一两格电，基本够用。</p>
+                            <div class="tag-list">
+                                <span>性价比高(4178)</span>
+                                <span>系统流畅(3995)</span>
+                                <span>外观漂亮(3976)</span>
+                                <span>功能齐全(3920)</span>
+                            </div>
+                            <div class="pic-list">
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_1.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_2.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_3.jpg"></a>
+                                <a href="javascript:;" class="J-thumb-img"><img src="../img/p_img/p_80_80_4.jpg"></a>
+                            </div>
+                            <div class="order-info mart10">
+                                <span>2016-10-28 22:42</span>
+                                <span>类型：U型枕</span>
+                                <span>颜色：蓝色</span>
+                                <span class="p_price">来自巨氧超宝iphone客户端</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-item clearfix">
+                        <div class="user-column floatleft">
+                            <div class="user-info">
+                                <span><img src="../img/p_img/p_80_80_5.jpg"></span>
+                                <span class="color_3">张***1</span>
+                            </div>
+                            <div class="user-level color_8 mart10">
+                                <span>普通用户</span>
+                                <span>山东威海</span>
+                            </div>
+                        </div>
+                        <div class="comment-column">
+                            <div class="el-rate">
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#75bb29;"></i></span>
+                                <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                            </div>
+                            <p class="comment-con">枕头很棒，虽然还没用，按压了一下回弹效果很不错，一个字 ~棒！听评论说有很重的气味，没到手之前还挺忐忑的，拿到手了觉得还好啊，可以接受，洗一下就没有
+                                味了。挺舒服的，也很软，回弹效果也不错。购买前一直问客服问题，他家的客服一直耐心的给我解答，客服态度特别好</p>
+                            <div class="tag-list">
+                                <span>性价比高(4178)</span>
+                                <span>系统流畅(3995)</span>
+                                <span>外观漂亮(3976)</span>
+                                <span>功能齐全(3920)</span>
+                            </div>
+                            <div class="order-info mart10">
+                                <span>2016-10-28 22:42</span>
+                                <span>类型：U型枕</span>
+                                <span>颜色：蓝色</span>
+                                <span class="p_price">来自巨氧超宝iphone客户端</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-pagination mart20 alignright">
+                        <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+                        <ul class="el-pager">
+                            <li class="number">1</li>
+                            <li class="number">2</li>
+                            <li class="number">3</li>
+                            <li class="el-icon more btn-quicknext el-icon-more"></li>
+                            <li class="number active">4</li>
+                        </ul>
+                        <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="comment-box" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--商品详情over-->
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script>
+    $(function(){
+        $('.detail_tab a').click(function(){
+            $(this).addClass('current').siblings().removeClass('current');
+            if($(this).index() == 0){
+                $(this).parents('.content').find('.div_detail').show();
+                $(this).parents('.content').find('.div_evaluate').hide();
+            }else{
+                $(this).parents('.content').find('.div_evaluate').show();
+                $(this).parents('.content').find('.div_detail').hide();
+            }
+
+        });
+    });
+</script>
+</body>
+</html>

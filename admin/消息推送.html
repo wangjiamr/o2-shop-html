@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>未处理投诉</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+    <style type="text/css">
+        .el-checkbox__inner{width: 14px;height:14px;}
+    </style>
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">消息推送</p>
+            <div class="mart20 clearfix">
+                <button type="button" class="el-button el-button--grey el-button--small floatleft width-80"><span>新建消息</span></button>
+            </div>
+            <table class="table_cell mart10">
+                <colgroup>
+                    <col width="12%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>消息标题</th>
+                    <th>发送时间</th>
+                    <th>发送至</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2017年春节物流停止接单通知</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td>全体用户</td>
+                        <td class="aligncenter">
+                            <button type="button" class="el-button el-button--text"><span>查看</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2017年春节物流停止接单通知</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td>全体用户</td>
+                        <td class="aligncenter">
+                            <button type="button" class="el-button el-button--text"><span>查看</span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="el-pagination mart20 alignright">
+                <button class="btn-prev disabled"><i class="el-icon el-icon-arrow-left"></i></button>
+                <ul class="el-pager">
+                    <li class="number active">1</li>
+                    <li class="number">2</li>
+                    <li class="number">3</li>
+                    <li class="number">4</li>
+                    <li class="el-icon more btn-quickprev el-icon-more"></li>
+                    <li class="number">20</li>
+                </ul>
+                <button class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

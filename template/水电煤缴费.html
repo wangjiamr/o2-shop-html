@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水电煤缴费</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 40px;overflow: hidden;}
+        .pay_main{width: 798px;padding-bottom:30px;margin: 0 auto;border:1px solid #d4dde0;border-radius:4px;overflow: hidden;background: #fff;}
+        .pay_main_header{height: 50px;background: #f0f6f8;border-bottom:1px solid #d4dde0;}
+        .pay_main_header .el-dropdown,.pay_main_header .el-dropdown-link{line-height: 20px;}
+        .pay_main_header .el-dropdown span{display: inline-block;}
+        .pay_main_header .el-dropdown span img{vertical-align: bottom;}
+        .pay_main_header .el-dropdown i{font-size: 10px;color: #9eaaaf;}
+        .pay_txt{height:38px;line-height: 38px;border:1px solid #eee;background: #fafafa;margin: 0 80px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart nobg floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content">
+    <p class="aligncenter mart50 font36 color_3">水电煤缴费</p>
+    <div class="pay_main mart50">
+        <div class="pay_main_header clearfix">
+            <div class="el-dropdown mart15 marl50">
+                <span class="el-dropdown-link">
+                    <span><img src="../img/pay-1.png" width="20"></span>
+                    <span class="width-50 marl5">水费</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+            <div class="el-dropdown mart15 marl80">
+                <span class="el-dropdown-link">
+                    <span class="width-50 marl5">北京</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+            <div class="el-dropdown mart15 marl80">
+                <span class="el-dropdown-link">
+                    <span class="width-50 marl5">北京</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="pay_inner">
+            <form class="el-form mart30">
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width:150px;">公共事业单位</label>
+                    <div class="el-form-item__content" style="margin-left: 150px;">
+                        <div class="el-select width-200">
+                            <div class="el-input">
+                                <i class="el-input__icon el-icon-caret-top"></i>
+                                <input type="text" placeholder="北京市自来水集团" readonly="readonly" autocomplete="off" class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item is-error">
+                    <label class="el-form-item__label" style="width:150px;">客户编号</label>
+                    <div class="el-form-item__content" style="margin-left: 150px;">
+                        <div class="el-input width-200"><input type="text" autocomplete="off" class="el-input__inner"></div>
+                        <div class="el-form-item__error">客户编号不能为空</div>
+                    </div>
+                </div>
+                <div class="el-form-item mart50">
+                    <div class="el-form-item__content" style="margin-left: 150px;">
+                        <button type="button" class="el-button el-button--theme width-120"><span>查询</span></button>
+                    </div>
+                </div>
+            </form>
+            <div class="pay_txt mart30"><span class="marl20 color_3">您本月账单已完成缴费，未查询到尚未缴费账单！</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

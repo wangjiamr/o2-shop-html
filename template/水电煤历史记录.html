@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水电煤历史记录</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body { background: #fafafa; }
+
+        .header { height: 40px; overflow: hidden; }
+
+        .pay_main { width: 798px; padding-bottom: 30px; margin: 0 auto; border: 1px solid #d4dde0; border-radius: 4px; overflow: hidden; background: #fff; }
+
+        .pay_main_header { height: 50px; background: #f0f6f8; border-bottom: 1px solid #d4dde0; }
+
+        .pay_main_header .el-dropdown, .pay_main_header .el-dropdown-link { line-height: 20px; }
+
+        .pay_main_header .el-dropdown span { display: inline-block; }
+
+        .pay_main_header .el-dropdown span img { vertical-align: bottom; }
+
+        .pay_main_header .el-dropdown i { font-size: 10px; color: #9eaaaf; }
+
+        .pay_txt { height: 38px; line-height: 38px; border: 1px solid #eee; background: #fafafa; margin: 0 80px; }
+
+        .pay_main_header2 { height: 58px; border-bottom: 1px solid #d4dde0; }
+
+        .pay_main_header2 .el-form-item { margin: 10px 0 0 20px; }
+
+        .pay_main_header2 .el-date-editor.el-input { width: 120px; }
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart nobg floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content">
+    <p class="aligncenter mart50 font36 color_3">水电煤缴费</p>
+
+    <div class="pay_main mart50">
+        <div class="pay_main_header clearfix">
+            <div class="el-dropdown mart15 marl50">
+                <span class="el-dropdown-link">
+                    <span><img src="../img/pay-1.png" width="20"></span>
+                    <span class="width-50 marl5">水费</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+            <div class="el-dropdown mart15 marl80">
+                <span class="el-dropdown-link">
+                    <span class="width-50 marl5">北京</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+            <div class="el-dropdown mart15 marl80">
+                <span class="el-dropdown-link">
+                    <span class="width-50 marl5">北京</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="pay_main_header2 clearfix">
+            <form class="el-form el-form--inline">
+                <div class="el-form-item">
+                    <div class="el-form-item__content">
+                        <div class="el-select width-160">
+                            <div class="el-input">
+                                <i class="el-input__icon el-icon-caret-top"></i>
+                                <input type="text" placeholder="北京市自来水集团" readonly="readonly" autocomplete="off"
+                                       class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width:70px;">客户编号</label>
+
+                    <div class="el-form-item__content" style="margin-left: 70px;">
+                        <div class="el-input width-120"><input type="text" autocomplete="off" class="el-input__inner">
+                        </div>
+                        <div class="el-form-item__error">客户编号不能为空</div>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <div class="el-form-item__content">
+                        <div class="el-date-editor el-input el-date-editor--date width-120">
+                            <i class="el-input__icon el-icon-date"></i>
+                            <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item marl5 mart20">至</div>
+                <div class="el-form-item marl5">
+                    <div class="el-form-item__content">
+                        <div class="el-date-editor el-input el-date-editor--date width-120">
+                            <i class="el-input__icon el-icon-date"></i>
+                            <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <div class="el-form-item__content">
+                        <button type="button" class="el-button el-button--theme el-button--small width-60">
+                            <span>查询</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="pay_inner">
+            <div class="marl20 marr20 mart20">
+                <div class="el-table el-table--fit el-table--border" style="width: 100%;">
+                    <div class="el-table__header-wrapper">
+                        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%">
+                            <colgroup>
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                    <div class="cell">账期</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                    <div class="cell">金额(元)</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                    <div class="cell">缴费人</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                    <div class="cell">缴费日期</div>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="el-table__body-wrapper">
+                        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                            <colgroup>
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="cell">2016年3月</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">200.00</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">刘德华</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">2016-3-31 12:00:00</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="cell">2016年3月</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">200.00</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">刘德华</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">2016-3-31 12:00:00</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="cell">2016年3月</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">200.00</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">刘德华</div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">2016-3-31 12:00:00</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

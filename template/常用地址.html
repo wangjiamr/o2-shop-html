@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>常用地址</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .address_list_mine li{padding:10px;margin-top:10px;border:2px solid #e0e0e0;color: #333;line-height: 22px;position: relative;}
+        .address_list_mine li span.color_8{display: inline-block;width: 100px;text-align: right;padding-right: 10px;}
+        .address_list_mine li:hover{border:2px solid #75bb29;}
+        .address_list_mine li p.alignright{margin-top: -22px;}
+        .address_list_mine li a{color: #888;}
+        .address_list_mine li a:hover{color: #75bb29;}
+        .address_list_mine li .off{position: absolute;top:0;right:0;line-height:12px;padding: 10px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart nobg floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo2.jpg"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人信息</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">个人信息</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">账户安全</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">支付安全</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#" class="current">常用地址</a></dt>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="lthei">
+            <div class="mart20">
+                <p>
+                    <a href="#" class="btn btn-theme font14 marr10">新增收货地址</a>
+                    <span>您已创建<em class="color_theme">6</em>个收货地址，最多可创建<em class="color_theme">20</em>个</span>
+                </p>
+                <ul class="address_list_mine">
+                    <li>
+                        <a href="#" class="off"><i class="el-icon-close"></i></a>
+                        <p class="font14 marbt20">
+                            <span>刘德华</span>
+                            <span>北京</span>
+                            <em class="you marl20">默认地址</em>
+                        </p>
+                        <p>
+                            <span class="color_8">收货人：</span>
+                            <span>刘德华</span>
+                        </p>
+                        <p>
+                            <span class="color_8">所在地区：</span>
+                            <span>北京市朝阳区</span>
+                        </p>
+                        <p>
+                            <span class="color_8">地址：</span>
+                            <span>东四环中路58号远洋国际中心D座2203室</span>
+                        </p>
+                        <p>
+                            <span class="color_8">手机：</span>
+                            <span>186****8825</span>
+                        </p>
+                        <p>
+                            <span class="color_8">电子邮箱：</span>
+                            <span>2837463893@163.com</span>
+                        </p>
+                        <p class="alignright">
+                            <a href="#" class="marr10">设为默认</a>
+                            <a href="#">编辑</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#" class="off"><i class="el-icon-close"></i></a>
+                        <p class="font14 marbt20">
+                            <span>梁朝伟</span>
+                            <span>广东 深圳</span>
+                        </p>
+                        <p>
+                            <span class="color_8">收货人：</span>
+                            <span>梁朝伟</span>
+                        </p>
+                        <p>
+                            <span class="color_8">所在地区：</span>
+                            <span>广东 深圳</span>
+                        </p>
+                        <p>
+                            <span class="color_8">地址：</span>
+                            <span>建国路89号华贸商务楼16号楼1222室</span>
+                        </p>
+                        <p>
+                            <span class="color_8">手机：</span>
+                            <span>186****8825</span>
+                        </p>
+                        <p>
+                            <span class="color_8">电子邮箱：</span>
+                            <span>28371393@163.com</span>
+                        </p>
+                        <p class="alignright">
+                            <a href="#" class="marr10">设为默认</a>
+                            <a href="#">编辑</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#" class="off"><i class="el-icon-close"></i></a>
+                        <p class="font14 marbt20">
+                            <span>刘德华</span>
+                            <span>北京</span>
+                        </p>
+                        <p>
+                            <span class="color_8">收货人：</span>
+                            <span>刘德华</span>
+                        </p>
+                        <p>
+                            <span class="color_8">所在地区：</span>
+                            <span>北京市朝阳区</span>
+                        </p>
+                        <p>
+                            <span class="color_8">地址：</span>
+                            <span>东四环中路58号远洋国际中心D座2203室</span>
+                        </p>
+                        <p>
+                            <span class="color_8">手机：</span>
+                            <span>186****8825</span>
+                        </p>
+                        <p>
+                            <span class="color_8">电子邮箱：</span>
+                            <span>2837463893@163.com</span>
+                        </p>
+                        <p class="alignright">
+                            <a href="#" class="marr10">设为默认</a>
+                            <a href="#">编辑</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#" class="off"><i class="el-icon-close"></i></a>
+                        <p class="font14 marbt20">
+                            <span>梁朝伟</span>
+                            <span>广东 深圳</span>
+                        </p>
+                        <p>
+                            <span class="color_8">收货人：</span>
+                            <span>梁朝伟</span>
+                        </p>
+                        <p>
+                            <span class="color_8">所在地区：</span>
+                            <span>广东 深圳</span>
+                        </p>
+                        <p>
+                            <span class="color_8">地址：</span>
+                            <span>建国路89号华贸商务楼16号楼1222室</span>
+                        </p>
+                        <p>
+                            <span class="color_8">手机：</span>
+                            <span>186****8825</span>
+                        </p>
+                        <p>
+                            <span class="color_8">电子邮箱：</span>
+                            <span>28371393@163.com</span>
+                        </p>
+                        <p class="alignright">
+                            <a href="#" class="marr10">设为默认</a>
+                            <a href="#">编辑</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

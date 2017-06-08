@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>返利余额</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .info_box{padding:20px 0 20px 20px;line-height: 20px;}
+        .info_box span{padding-right:50px;}
+        .tabs_nav_t{border: 0!important;}
+        .tabs_nav_t ul li{height: 20px!important;line-height: 20px!important;padding: 0 10px!important;border: 0;}
+        .tabs_nav_t ul li.current{border-bottom: 2px solid #75bb29;}
+        .tb-data thead{border: 1px solid #e0e0e0;}
+        .tb-data thead th,.tb-data tbody td{padding-left:30px;width: 150px;}
+        .tb-data thead th{height:38px;background: #fafafa;}
+        .tb-data tbody td{height:38px;border-bottom: 1px dotted #e0e0e0;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo2.jpg"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt class="color_3">我的购物车</dt>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">订单中心</dt>
+            <dd><a href="#">我买到的宝贝</a></dd>
+            <dd><a href="#">取消订单记录</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">收藏夹</dt>
+            <dd><a href="#">收藏的商品</a></dd>
+            <dd><a href="#">收藏的店铺</a></dd>
+            <dd><a href="#">浏览历史</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">资产中心</dt>
+            <dd><a href="#">账户余额</a></dd>
+            <dd><a href="#" class="current">返利余额</a></dd>
+            <dd><a href="#">充值</a></dd>
+            <dd><a href="#">转出</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">我的维权</dt>
+            <dd><a href="#">退款</a></dd>
+            <dd><a href="#">退货</a></dd>
+            <dd><a href="#">换货</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="info_box font14 lthei">
+            <span>返利余额：<span class="p_price font16">23,423.00</span></span>
+            <span>锁定余额：<span class="p_price font16">230.00</span></span>
+            <span>账户状态：<span class="p_price font16">有效账户</span></span>
+        </div>
+        <div class="mart30">
+            <div class="tabs_nav_t clearfix">
+                <ul class="floatleft clearfix lthei font12">
+                    <li class="current"><a href="#" class="noborder">近三个月收支明细</a></li>
+                    <li><a href="#" class="noborder">三个月前收支明细</a></li>
+                </ul>
+            </div>
+            <table class="tb-data" width="100%">
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>存入</th>
+                        <th>支出</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2016-12-13 13:23</td>
+                        <td>1,000.00</td>
+                        <td>0.00</td>
+                        <td>巨氧超宝转入</td>
+                    </tr>
+                    <tr>
+                        <td>2016-12-13 13:23</td>
+                        <td>1,000.00</td>
+                        <td>0.00</td>
+                        <td>消费</td>
+                    </tr>
+                    <tr>
+                        <td>2016-12-13 13:23</td>
+                        <td>1,000.00</td>
+                        <td>0.00</td>
+                        <td>巨氧超宝转入</td>
+                    </tr>
+                    <tr>
+                        <td>2016-12-13 13:23</td>
+                        <td>1,000.00</td>
+                        <td>0.00</td>
+                        <td>转出至巨氧超宝</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="el-pagination alignright mart20">
+                <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+                <ul class="el-pager">
+                    <li class="number">1</li>
+                    <li class="number">2</li>
+                    <li class="number">3</li>
+                    <li class="number active">4</li>
+                </ul>
+                <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

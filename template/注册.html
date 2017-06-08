@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .header,.header_main{height:80px;box-shadow: none;}
+        .detail_tab{border-bottom:2px solid #e0e0e0;}
+        .detail_tab a{display: inline-block;width:160px;line-height: 40px;padding-bottom:5px;color:#999;text-align: center;border-bottom:1px solid #e0e0e0;position: relative;bottom: -2px;}
+        .detail_tab a.current{color: #66a324;border-bottom:2px solid #66a324;}
+        .detail_tab a em{display: inline-block;width:20px;height: 20px;line-height:20px;border-radius: 50%;color: #fff;background: #999;vertical-align: middle;}
+        .detail_tab a.current em{background: #66a324;}
+        .detail_tab a i{vertical-align: middle;}
+        .el-form,.item_inner{width: 400px;margin: 0 auto;}
+        .item_one{min-height: 400px;}
+        .item_one p{line-height: 30px;}
+        .reg_form .el-form-item{border: 1px solid #e0e0e0;border-radius: 4px;height: 50px;line-height: 50px;}
+        .reg_form .el-form-item__label{text-align:left;font-size:12px;text-indent:10px;color: #333;height: 50px;line-height: 50px;padding: 0;}
+        .reg_form .el-input__inner{border: 0!important;padding: 0;height: 50px;line-height: 50px;border-radius: 4px;font-size:12px;}
+        .reg_form .el-form-item__error{width:100%;background: #fff;line-height:50px;padding: 0;top:0;display: none;font-size: 12px;left:104%;}
+        .reg_form .is-error .el-form-item__error{display: block;}
+        .el-dropdown{text-indent: 0;border-right: 1px solid #e0e0e0;height: 50px;line-height: 50px;padding-right: 5px;}
+        .btn-next{height: 50px;line-height: 50px;background: #74ba29;color: #fff;border-radius:4px;padding:0;border:0;}
+        .el-checkbox__inner{width: 16px;height: 16px;}
+        .el-checkbox__inner.is-checked,.el-checkbox__inner{background: none;border-color:#707070;border-radius: 0;color: #707070;}
+        .el-checkbox__inner::after{border-color: #707070;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content mart30">
+    <div class="detail_tab aligncenter font16">
+        <a href="javascript:;" class="current"><em>1</em> 设置账户</a>
+        <a href="javascript:;"><em>2</em> 验证账户信息</a>
+        <a href="javascript:;"><i class="el-icon-circle-check font20"></i> 注册成功</a>
+    </div>
+    <div class="tab_items mart40">
+        <div class="item_one" style="display: ">
+            <div class="item_inner">
+                <form class="el-form reg_form">
+                    <div class="el-form-item is-error has-error">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">用户名</div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="您的账户名和登录名"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                    <div class="el-form-item ">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">邮箱</div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="您的电子邮箱"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                    <div class="el-form-item ">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">设置密码</div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="建议至少使用两种字符组合"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                    <div class="el-form-item ">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">确认密码</div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="请再次输入密码"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                    <div class="el-form-item ">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">
+                            <div class="el-dropdown">
+                                <span class="el-dropdown-link"><em>中国0086</em><i class="el-icon-arrow-down marl5 font12"></i></span>
+                            </div>
+                        </div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="请输入常用手机号码"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                    <div class="el-form-item ">
+                        <div class="el-form-item__label alignleft" style="width: 110px;">邮箱</div>
+                        <div class="el-form-item__content" style="margin-left: 110px;">
+                            <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="请输入验证码"></div>
+                            <div class="el-form-item__error">错误信息</div>
+                        </div>
+                    </div>
+                </form>
+                <p class="mart30">
+                    <label class="el-checkbox">
+                            <span class="el-checkbox__input">
+                                <span class="el-checkbox__inner is-checked"></span>
+                                <input type="checkbox" class="el-checkbox__original" value="">
+                            </span>
+                        <span class="el-checkbox__label color_8">我已同意并遵守<a href="#" class="a_link">《巨氧超宝用户协议》</a></span>
+                    </label>
+                </p>
+                <!--<a href="#" class="btn block btn-next is-disabled font16 mart30">下一步</a>-->
+                <a href="#" class="el-button block btn-next el-button--large is-disabled font16 mart30">下一步</a>
+            </div>
+        </div>
+        <div class="item_one" style="display: none">
+            <p class="aligncenter mart50"><img src="../img/send_mail.jpg"></p>
+            <p class="aligncenter color_3 font16 mart50">已经有一封验证邮件发送至了您的邮箱<span class="p_price marl5">888888888@qq.com</span></p>
+            <p class="aligncenter color_3 font16">请点击邮件中的链接完成注册</p>
+        </div>
+        <div class="item_one" style="display:none ">
+            <p class="aligncenter mart50"><img src="../img/r_ok.jpg"></p>
+            <p class="aligncenter color_3 font22 mart50">恭喜您注册成功!</p>
+            <p class="aligncenter color_3 font14">正在为您跳转<span class="color_buy marl5">5</span></p>
+            <p class="aligncenter color_3 font14 mart20"><a href="#">前往首页</a></p>
+        </div>
+    </div>
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

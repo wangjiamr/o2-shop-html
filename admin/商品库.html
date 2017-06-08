@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品库</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">商品库</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form el-form--inline clearfix">
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:60px;">订单编号</label>
+                        <div class="el-form-item__content" style="margin-left:60px;">
+                            <div class="el-input width-100"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width: 60px;">收货人</label>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-input width-60"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:100px;">收货人手机号</label>
+                        <div class="el-form-item__content" style="margin-left: 100px;">
+                            <div class="el-input width-110"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:50px;">状态</label>
+                        <div class="el-form-item__content" style="margin-left:50px;">
+                            <select class="admin_select width-60">
+                                <option>待审核</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:70px;">下单时间</label>
+                        <div class="el-form-item__content" style="margin-left: 70px;">
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-100">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择日期" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span class="">至</span>
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-100" type="fixed-time">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="选择时间" autocomplete="off" class="el-input__inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar floatright">
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-60"><span>搜索</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mart20 clearfix">
+                <button type="button" class="el-button el-button--grey el-button--small floatleft width-80"><span>批量导出</span></button>
+                <div class="el-select floatright width-120">
+                    <div class="el-input">
+                        <i class="el-input__icon el-icon-caret-top"></i>
+                        <input type="text" placeholder="更改显示列" readonly="readonly" autocomplete="off" class="el-input__inner">
+                    </div>
+                </div>
+            </div>
+            <table class="table_cell mart10">
+                <colgroup>
+                    <col width="4%">
+                    <col width="4%">
+                    <col width="20%">
+                    <col width="8%">
+                    <col width="10%">
+                    <col width="5%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="8%">
+                    <col width="8%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                        <label class="el-checkbox">
+                            <span class="el-checkbox__input">
+                                <span class="el-checkbox__inner"></span>
+                                <input type="checkbox" class="el-checkbox__original" value="">
+                            </span>
+                        </label>
+                        </th>
+                        <th>图片</th>
+                        <th>商品名称</th>
+                        <th>销售价</th>
+                        <th>SPU商家编码</th>
+                        <th>库存</th>
+                        <th>商铺名称</th>
+                        <th>商城分组</th>
+                        <th>上下架状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="el-checkbox">
+                            <span class="el-checkbox__input">
+                                <span class="el-checkbox__inner"></span>
+                                <input type="checkbox" class="el-checkbox__original" value="">
+                            </span>
+                        </label>
+                    </td>
+                    <td><span class="p_img"><img src="../img/p_img/p_80_80_2.jpg"></span></td>
+                    <td class="alignleft"><span>巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行</span></td>
+                    <td>199.00</td>
+                    <td>p94856869</td>
+                    <td>1000</td>
+                    <td>巨氧超宝官方旗舰店</td>
+                    <td>居家用品</td>
+                    <td><span class="">已上架</span></td>
+                    <td>
+                        <p><button type="button" class="el-button el-button--text"><span>查看</span></button></p>
+                        <p><button type="button" class="el-button el-button--text"><span>强制下架</span></button></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="el-checkbox">
+                            <span class="el-checkbox__input">
+                                <span class="el-checkbox__inner"></span>
+                                <input type="checkbox" class="el-checkbox__original" value="">
+                            </span>
+                        </label>
+                    </td>
+                    <td><span class="p_img"><img src="../img/p_img/p_80_80_2.jpg"></span></td>
+                    <td class="alignleft">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行</td>
+                    <td>199.00</td>
+                    <td>p94856869</td>
+                    <td>1000</td>
+                    <td>巨氧超宝官方旗舰店</td>
+                    <td>居家用品</td>
+                    <td><span class="color_cross">待上架</span></td>
+                    <td>
+                        <p><button type="button" class="el-button el-button--text"><span>查看</span></button></p>
+                        <p><button type="button" class="el-button el-button--text"><span>强制下架</span></button></p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="el-pagination mart20 alignright">
+                <button class="btn-prev disabled"><i class="el-icon el-icon-arrow-left"></i></button>
+                <ul class="el-pager">
+                    <li class="number active">1</li>
+                    <li class="number">2</li>
+                    <li class="number">3</li>
+                    <li class="number">4</li>
+                    <li class="el-icon more btn-quickprev el-icon-more"></li>
+                    <li class="number">20</li>
+                </ul>
+                <button class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

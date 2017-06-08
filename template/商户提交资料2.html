@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商户提交资料2</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background:#fafafa;}
+        .header{height: 140px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:100px;background: #fff;}
+        .header_main .color_theme{line-height:100px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .order-step{width:420px;height:6px;margin: 0 auto;}
+        .order-step div{width:140px;height: 6px;background: #e0e0e0;text-align: center;position: relative;}
+        .order-step div span,.order-step div em{display: inline-block;}
+        .order-step div em{width:26px;height: 26px;line-height:26px;border-radius: 50%;background: #e0e0e0;color: #fff;position: absolute;top:50%;left:50%;margin:-13px 0 0 -13px;}
+        .order-step div.is-success{background: #addc7a;color: #addc7a;}
+        .order-step div.is-success em{background: #addc7a;}
+        .order-step div.is-progress{background: #75bb29;color: #75bb29;}
+        .order-step div.is-progress em{background: #75bb29;}
+        .step_box{width:800px;border:1px solid #e0e0e0;border-right:0;}
+        .step_box div{width: 199px;float: left;height:48px;line-height:48px;border-right:1px solid #e0e0e0;font-size: 14px;color:#e0e0e0;}
+        .step_box div i{font-size: 30px;float: left;margin:0 5px 0 20px;}
+        .step_box div.is_success{color:#addc7a;}
+        .step_box div.is_progress,.reg_box .el-dragger:hover i{color:#75bb29;}
+        .reg_box{border: 1px solid #e0e0e0;background: #fff;}
+        .reg_bt{line-height:59px;border-top: 1px solid #e0e0e0;}
+        .reg_bt .btn-theme,.reg_bt .btn-take{width:auto;min-width:60px;padding:0 10px;height: 30px;line-height: 30px;font-size: 12px!important;}
+        .reg_box .el-input,.reg_box .el-textarea__inner{width: 160px;}
+        .reg_box .el-form-item__label{font-size: 12px;color: #888;text-align: right;padding-top: 6px;}
+        .reg_box .el-input .el-input__inner,.reg_box .el-date-editor__editor,.reg_box .el-textarea__inner{border-radius: 0;border-color:#e0e0e0;height: 28px;line-height: 28px;font-size: 12px;}
+        .reg_box .el-form-item__error,.reg_box .el-form-item__info{top:0;padding:0!important;left: 170px;height: 28px;line-height: 28px;}
+        .reg_box .el-form-item{margin-bottom:20px;}
+        .reg_box .el-form-item__content{line-height: 24px;}
+        .reg_box .el-radio__inner{width: 14px;height: 14px;}
+        .reg_box .el-radio span{padding:0;}
+        .reg_box .el-form-item_select{width:80px;}
+        .reg_box .el-date-editor__editor,.reg_box .el-date-editor{width: 160px;height: 28px;line-height: 28px;}
+        .reg_box .el-date-editor__trigger.el-icon{height: 28px;line-height: 28px;color: #75bb29;}
+        .reg_box .el-textarea__inner{width: 340px;height:100px;resize: none;}
+        .reg_box .el-dragger{width: 98px;height: 98px;border-radius:0;background: #fff;}
+        .reg_box .el-dragger i{margin:50px 0 10px 0;}
+        .reg_box .el-upload__input,.reg_box .el-dragger .el-upload__files{width: 98px;height: 98px;display: block;position:absolute;top:0;left: 0;opacity: 0;}
+        .reg_box .el-dragger .el-upload__files{opacity: 1;margin: 0;}
+        .reg_box .el-dragger .el-upload__files li{display: table-cell;width: 98px;height: 98px;}
+        .reg_box .el-dragger .el-upload__files li img{width:80px;margin-top:10px;vertical-align: middle;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+            <span class="floatleft lthei color_theme font20 marl10">商户入驻</span>
+            <div class="step_box mart30 floatright clearfix">
+                <div class="clearfix is_success"><i class="iconfont icon-roundcheck"></i> 注册巨氧超宝</div>
+                <div class="clearfix is_progress"><i class="iconfont icon-calendar"></i>填写/提交信息资料</div>
+                <div class="clearfix"><i class="iconfont icon-time"></i>注册巨氧超宝</div>
+                <div class="clearfix"><i class="iconfont icon-shoplight"></i>注册巨氧超宝</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content lthei color_3 mart40">
+    <div class="order-step mart50 clearfix">
+        <div class="floatleft is-success"><span class="p_top20">入驻联系人信息</span><em>1</em></div>
+        <div class="floatleft is-progress"><span class="p_top20">公司信息</span><em>2</em></div>
+        <div class="floatleft"><span class="p_top20">店铺信息</span><em>3</em></div>
+    </div>
+    <p class="font14 mart40">营业执照信息</p>
+    <div class="reg_box mart10">
+        <form class="el-form mart20 marl40">
+            <div class="el-form-item is-required">
+                <label class="el-form-item__label" style="width: 160px;">执照类型：</label>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-radio-group">
+                        <label class="el-radio">
+                            <span class="el-radio__input">
+                                <span class="el-radio__inner is-checked"></span>
+                                <input type="radio" class="el-radio__original" value="">
+                            </span>
+                            <span class="el-radio__label">普通执照</span>
+                        </label>
+                        <label class="el-radio">
+                            <span class="el-radio__input">
+                                <span class="el-radio__inner"></span>
+                                <input type="radio" class="el-radio__original" value="">
+                            </span>
+                            <span class="el-radio__label">三证合一</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">公司名称：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__info">请按照营业执照上登记的完整名称填写</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">营业执照注册号：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__info">请按照营业执照上的注册号进行填写</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">法定代表人姓名：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__info">请按照营业执照上登记的法人填写</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">营业执照所在地：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>1987</option>
+                        <option>1986</option>
+                        <option>1985</option>
+                        <option>1984</option>
+                    </select>
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">营业执照详细地址：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__info">用于入驻过程中接收京东审核结果、开店账号密码信息，请务必正确填写。</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">成立日期：</div>
+                <div class="el-form-item__content" style="margin-left: 100px;">
+                    <div class="el-date-editor el-input el-date-editor--time-select">
+                        <i class="el-input__icon el-icon-date"></i>
+                        <input type="text" placeholder="" class="el-input__inner">
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">营业期限：</div>
+                <div class="el-form-item__content" style="margin-left: 100px;">
+                    <div class="el-date-editor el-input el-date-editor--time-select">
+                        <i class="el-input__icon el-icon-date"></i>
+                        <input type="text" placeholder="" class="el-input__inner">
+                    </div>
+                    <span class="line">-</span>
+                    <div class="el-date-editor el-input el-date-editor--time-select">
+                        <i class="el-input__icon el-icon-date"></i>
+                        <input type="text" placeholder="" class="el-input__inner">
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">注册资本：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__info">万元</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">经营范围：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-textarea"><textarea rows="2" class="el-textarea__inner"></textarea></div>
+                    <div class="el-form-item__info" style="position: inherit;left:0;">请与营业执照或企业信息公示网的经营范围保持一致</div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">公司所在地：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>1987</option>
+                        <option>1986</option>
+                        <option>1985</option>
+                        <option>1984</option>
+                    </select>
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="el-form-item_select">
+                        <option>请选择</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">公司详细地址：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">公司电话：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">公司紧急联系人：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">公司紧急联系人手机：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <label class="el-form-item__label" style="width: 160px;">法定代表人证件类型：</label>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-radio-group">
+                        <label class="el-radio">
+                            <span class="el-radio__input">
+                                <span class="el-radio__inner is-checked"></span>
+                                <input type="radio" class="el-radio__original" value="">
+                            </span>
+                            <span class="el-radio__label">大陆身份证</span>
+                        </label>
+                        <label class="el-radio">
+                            <span class="el-radio__input">
+                                <span class="el-radio__inner"></span>
+                                <input type="radio" class="el-radio__original" value="">
+                            </span>
+                            <span class="el-radio__label">非大陆身份证</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">法定代表人身份证号：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">法人身份证电子版：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-upload__inner el-dragger">
+                        <i class="el-icon-plus font16"></i>
+                        <p>正面</p>
+                        <input type="file" multiple="multiple" class="el-upload__input">
+                    </div>
+                    <div class="el-upload__inner el-dragger marl20">
+                        <!--<i class="el-icon-plus font16"></i>-->
+                        <!--<p>背面</p>-->
+                        <!--<input type="file" multiple="multiple" class="el-upload__input">-->
+                        <ul class="el-upload__files">
+                            <li><img src="../img/p_img/p_80_80_2.jpg"></li>
+                        </ul>
+                    </div>
+                    <div class="el-form-item__info mart5" style="position: inherit;left:0;line-height: 20px;">
+                        <p>身份证要求正反两面，复印件请加盖开店公司红章</p>
+                        <p>图片尺寸请确保800px*800px以上，文件大小1MB以内，支持JPG、GIF、PNG格式，最多可上传2张</p>
+                    </div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">营业执照电子版：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-upload__inner el-dragger">
+                        <i class="el-icon-plus font16 mart40"></i>
+                        <input type="file" multiple="multiple" class="el-upload__input">
+                    </div>
+                    <div class="el-form-item__info mart5" style="position: inherit;left:0;line-height: 20px;">
+                        <p>营业执照复印件需加盖公司红章扫描上传，若营业执照上未体现注册资本、经营范围，请在营业执照后另行上传企业信息公示网上的截图。</p>
+                        <p>图片尺寸请确保800px*800px以上，文件大小1MB以内，支持JPG、GIF、PNG格式，最多可上传2张</p>
+                    </div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">银行开户许可证电子版：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-upload__inner el-dragger">
+                        <i class="el-icon-plus font16 mart40"></i>
+                        <input type="file" multiple="multiple" class="el-upload__input">
+                    </div>
+                    <div class="el-form-item__info mart5" style="position: inherit;left:0;line-height: 20px;">
+                        <p>图片尺寸请确保800px*800px以上，文件大小1MB以内，支持JPG、GIF、PNG格式</p>
+                    </div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <p class="font14 mart40">组织机构代码证</p>
+    <div class="reg_box mart10">
+        <form class="el-form mart20 marl40">
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">组织机构代码：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="" value=""></div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label " style="width: 160px;">组织机构代码证有效期：</div>
+                <div class="el-form-item__content" style="margin-left: 100px;">
+                    <div class="el-date-editor el-input el-date-editor--time-select">
+                        <i class="el-input__icon el-icon-date"></i>
+                        <input type="text" placeholder="" class="el-input__inner">
+                    </div>
+                    <span class="line">-</span>
+                    <div class="el-date-editor el-input el-date-editor--time-select">
+                        <i class="el-input__icon el-icon-date"></i>
+                        <input type="text" placeholder="" class="el-input__inner">
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item is-required">
+                <div class="el-form-item__label" style="width: 160px;">组织机构代码证电子版：</div>
+                <div class="el-form-item__content" style="margin-left: 160px;">
+                    <div class="el-upload__inner el-dragger">
+                        <i class="el-icon-plus font16 mart40"></i>
+                        <input type="file" multiple="multiple" class="el-upload__input">
+                    </div>
+                    <div class="el-form-item__info mart5" style="position: inherit;left:0;line-height: 20px;">
+                        <p>图片尺寸请确保800px*800px以上，文件大小1MB以内，支持JPG、GIF、PNG格式</p>
+                    </div>
+                    <div class="el-form-item__error">错误信息</div>
+                </div>
+            </div>
+        </form>
+        <div class="reg_bt alignright">
+            <a href="#" class="btn btn-take font14 marr20">上一步</a>
+            <a href="#" class="btn btn-theme font14 marr20">下一步完善税务及银行信息</a>
+        </div>
+    </div>
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

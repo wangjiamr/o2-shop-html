@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>退换记录明细</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .steps_top{height:54px;}
+        .steps_top span.floatleft{line-height:54px;}
+        .el-step__head{width: 18px;height: 18px;}
+        .el-step__title{font-size: 12px;}
+        .el-step__head.is-text{border-width:4px;}
+        .el-step__line{background: #e0e0e0;}
+        .el-step__line.is-horizontal{top:10px;left: 22px;height: 4px;}
+        .el-step__head.is-text.is-success .el-step__line{background: #75bb29;}
+        .el-step__icon{line-height: 18px;font-size: 12px;}
+        .el-step__head.is-text.is-process,.el-step__head.is-text.is-wait{border-color:#e0e0e0;}
+        .el-step__title.is-wait{color: #888;}
+        .el-step__title.is-success{color: #75bb29;}
+        .el-step__head.is-text.is-success{color: #75bb29;background: none;}
+        .info_box{padding:40px 0 40px 150px;line-height: 20px;}
+        .step_box{border-left:2px solid #75bb29;padding-left: 45px;}
+        .step_box ul li{width:500px;border-bottom:1px dotted #e7e7e7;padding-bottom:15px;margin-bottom:15px;line-height: 20px;}
+        .i-circle{display: inline-block;width: 10px;height: 10px;border:2px solid #fff;background: #75bb29;border-radius:50%;vertical-align: middle;}
+        .p_top{width:100%;position: absolute;top:-10px;left: -98px;line-height:14px;}
+        .p_top span{display: inline-block;width:90px;text-align: center;position: relative;bottom: -2px;}
+        .info_box_p{padding: 40px;line-height:40px;}
+        .info_box_p span.color_3{display: inline-block;width: 90px;padding-right:10px;text-align: right;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo2.jpg"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt class="color_3">我的购物车</dt>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">订单中心</dt>
+            <dd><a href="#" class="current">我买到的宝贝</a></dd>
+            <dd><a href="#">取消订单记录</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">收藏夹</dt>
+            <dd><a href="#">收藏的商品</a></dd>
+            <dd><a href="#">收藏的店铺</a></dd>
+            <dd><a href="#">浏览历史</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">资产中心</dt>
+            <dd><a href="#">账户余额</a></dd>
+            <dd><a href="#">返利余额</a></dd>
+            <dd><a href="#">充值</a></dd>
+            <dd><a href="#">转出</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">我的维权</dt>
+            <dd><a href="#">退款</a></dd>
+            <dd><a href="#">退货</a></dd>
+            <dd><a href="#">换货</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="steps_top clearfix">
+            <span class="color_3 font14 floatleft">售后信息</span>
+            <div class="el-steps is-horizontal inlineblock marl50">
+                <div class="el-step is-horizontal" style="width: 100px;">
+                    <div class="el-step__head is-success is-text">
+                        <div class="el-step__line is-horizontal">
+                            <i class="el-step__line-inner"></i>
+                        </div>
+                        <span class="el-step__icon"><i class="el-icon-check"></i></span>
+                    </div>
+                    <div class="el-step__main">
+                        <div class="el-step__title is-success">提交申请</div>
+                        <div class="el-step__description is-process"></div>
+                    </div>
+                </div>
+                <div class="el-step is-horizontal" style="width: 100px;">
+                    <div class="el-step__head is-success is-text">
+                        <div class="el-step__line is-horizontal">
+                            <i class="el-step__line-inner"></i>
+                        </div>
+                        <span class="el-step__icon"><i class="el-icon-check"></i></span>
+                    </div>
+                    <div class="el-step__main">
+                        <div class="el-step__title is-wait">卖家确认</div>
+                        <div class="el-step__description is-wait"></div>
+                    </div>
+                </div>
+                <div class="el-step is-horizontal" style="width: 100px;">
+                    <div class="el-step__head is-wait is-text">
+                        <div class="el-step__line is-horizontal"><i class="el-step__line-inner"></i></div>
+                        <span class="el-step__icon"><i class="el-icon-check"></i></span>
+                    </div>
+                    <div class="el-step__main" style="margin-left: 0px;">
+                        <div class="el-step__title is-wait">退款处理</div>
+                        <div class="el-step__description is-wait"></div>
+                    </div>
+                </div>
+                <div class="el-step is-horizontal" style="width: 100px;">
+                    <div class="el-step__head is-wait is-text">
+                        <div class="el-step__line is-horizontal"><i class="el-step__line-inner"></i></div>
+                        <span class="el-step__icon"><i class="el-icon-check"></i></span>
+                    </div>
+                    <div class="el-step__main">
+                        <div class="el-step__title is-wait">完成</div>
+                        <div class="el-step__description is-wait"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info_box mart40">
+            <div class="step_box relative">
+                <p class="p_top p_price clearfix"><span class="floatleft">审核环节</span><i class="i-circle"></i></p>
+                <ul>
+                    <li>
+                        <p class="color_3">处理信息：</p>
+                        <p>您的服务单已审核上门换新</p>
+                        <p><span class="color_3">操作人：</span>杨文旭 (2016-08-03 20:18:32)</p>
+                    </li>
+                    <li>
+                        <p class="color_3">处理信息：</p>
+                        <p>您的服务单已审核上门换新</p>
+                        <p><span class="color_3">操作人：</span>杨文旭 (2016-08-03 20:18:32)</p>
+                    </li>
+                    <li>
+                        <p class="color_3">处理信息：</p>
+                        <p>您的服务单已审核上门换新</p>
+                        <p><span class="color_3">操作人：</span>杨文旭 (2016-08-03 20:18:32)</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="color_3 font14 mart40">服务信息</p>
+        <div class="info_box info_box_p mart10">
+            <p>
+                <span class="color_3">商品处理方式:</span>
+                <span>客户期望处理方式为“换货”	</span>
+            </p>
+            <p>
+                <span class="color_3">问题描述:</span>
+                <span>号买小了 换个38号的	</span>
+            </p>
+            <p>
+                <span class="color_3">收货地址:</span>
+                <span>北京朝阳区三环到四环之间大望路华茂商务楼16号楼12层1222室(上门换新)</span>
+            </p>
+            <p>
+                <span class="color_3">联系信息:</span>
+                <span>张睿   手机：185****8959</span>
+            </p>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

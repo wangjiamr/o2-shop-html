@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>店内分类</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:80px;background: #0085d7;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .p_price{line-height: 30px;}
+        .p_price a.btn-theme{width:100px;height:30px;line-height:30px;}
+        .p_price a.btn-theme input{position: absolute;width: 100px;height: 30px;left: 0;top:0;text-indent: -999px;font-size: 0;outline: 0;}
+        .info_box .el-input{width: 160px;}
+        .info_box .el-form-item__label{font-size: 12px;color: #888;text-align: right;padding-top: 6px;}
+        .info_box .el-input .el-input__inner,.info_box .el-textarea__inner{border-radius: 0;border-color:#e0e0e0;height: 28px;line-height: 28px;font-size: 12px;}
+        .info_box .el-form-item__error,.info_box .el-form-item__info{top:3px;left: 170px;}
+        .info_box .el-textarea__inner{resize: none;}
+        .el-form-item__content{line-height: 24px;}
+        .el-form-item_select{width: 70px;}
+        .personal_left dl a.current,.p_price,.color_theme,.tb_add_class tbody td i.iconfont:hover{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;}
+        .btn-take{height: 28px;line-height: 28px;}
+        .col-1{width:50px;}
+        .col-2{width:340px;}
+        .col-3{width:200px;}
+        .col-4{width:150px;}
+        .col-5{width:90px;}
+        .tb_add_class{border: 1px solid #e0e0e0;}
+        .tb_add_class thead th{color:#333;height: 50px;background: #fafafa;}
+        .tb_add_class thead tr{border: 1px solid #e0e0e0;}
+        .tb_add_class tbody td{height: 39px;border-bottom: 1px dotted #e0e0e0;}
+        .tb_add_class input{width:178px;height: 24px;border: 1px solid #e0e0e0;outline: 0;text-indent: 5px;vertical-align: middle;}
+        .tb_add_class input:focus,.el-checkbox__inner:hover{border-color: #0085d7!important;}
+        .tb_add_class tbody td i.iconfont{font-size:20px;font-weight:bold;margin: 0 3px;cursor: pointer;}
+        .tb_add_class tbody td .btn-theme{width:100px;height: 26px;line-height:26px;}
+        .el-checkbox__inner.is-checked{background:#0085d7;border-color:#0085d7;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#" class="current">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="mart10 clearfix">
+            <p class="p_price font14 alignright clearfix" style="height: 30px;">
+                <span class="floatleft">店内分类</span>
+                <a href="#" class="btn btn-take font12 marr5">批量操作</a>
+                <a href="#" class="btn btn-theme font12 relative ">添新分类</a>
+            </p>
+            <table class="tb_add_class mart10" width="100%">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>分类名称</th>
+                        <th>移动</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="aligncenter">
+                            <label class="el-checkbox">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" class="el-checkbox__original" value="">
+                                </span>
+                            </label>
+                        </td>
+                        <td>
+                            <i class="el-icon-caret-bottom color_theme"></i>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <i class="iconfont icon-top"></i>
+                            <i class="iconfont icon-refresharrow-copy"></i>
+                            <i class="iconfont icon-down"></i>
+                            <i class="iconfont icon-refresharrow"></i>
+                        </td>
+                        <td>2016-12-17  14:53</td>
+                        <td><a href="#" class="color_theme">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter">
+                            <label class="el-checkbox">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" class="el-checkbox__original" value="">
+                                </span>
+                            </label>
+                        </td>
+                        <td>
+                            <span><img src="../img/td_class_ico.jpg"></span>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <i class="iconfont icon-refresharrow-copy"></i>
+                            <i class="iconfont icon-refresharrow"></i>
+                        </td>
+                        <td>2016-12-17  14:53</td>
+                        <td><a href="#" class="color_theme">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"></td>
+                        <td>
+                            <span class="floatleft"><img src="../img/td_class_ico.jpg"></span>
+                            <a href="#" class="btn btn-theme font12 relative ">添新分类</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td class="aligncenter">
+                        <label class="el-checkbox">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" class="el-checkbox__original" value="">
+                                </span>
+                        </label>
+                    </td>
+                    <td>
+                        <i class="el-icon-caret-bottom color_theme"></i>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <i class="iconfont icon-top"></i>
+                        <i class="iconfont icon-refresharrow-copy"></i>
+                        <i class="iconfont icon-down"></i>
+                        <i class="iconfont icon-refresharrow"></i>
+                    </td>
+                    <td>2016-12-17  14:53</td>
+                    <td><a href="#" class="color_theme">删除</a></td>
+                </tr>
+                <tr>
+                    <td class="aligncenter">
+                        <label class="el-checkbox">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" class="el-checkbox__original" value="">
+                                </span>
+                        </label>
+                    </td>
+                    <td>
+                        <span><img src="../img/td_class_ico.jpg"></span>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <i class="iconfont icon-refresharrow-copy"></i>
+                        <i class="iconfont icon-refresharrow"></i>
+                    </td>
+                    <td>2016-12-17  14:53</td>
+                    <td><a href="#" class="color_theme">删除</a></td>
+                </tr>
+                <tr>
+                    <td class="aligncenter"></td>
+                    <td>
+                        <span class="floatleft"><img src="../img/td_class_ico.jpg"></span>
+                        <a href="#" class="btn btn-theme font12 relative ">添新分类</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

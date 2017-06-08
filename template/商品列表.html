@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .breadcrumb{margin: 20px auto;}
+        .breadcrumb .el-select{width: 100px;font-size: 12px;}
+        .breadcrumb .el-select .el-input .el-input__icon{color: #b0b0b0;}
+        .breadcrumb .el-input__inner{border:1px solid #e0e0e0!important;border-radius:0;height: 24px;font-size: 12px!important;color: #888;}
+        .breadcrumb .el-input__inner:hover{border:1px solid #b0b0b0!important;color: #74ba29;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+            <ul class="header_nav lthei mart45 floatleft font16 clearfix">
+                <li><a href="#">首页<span></span></a></li>
+                <li class="current"><a href="#">生态产品<span></span></a></li>
+                <li><a href="#">生活用品<span></span></a></li>
+                <li class="noborder"><a href="#">日常用品<span></span></a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart25" style="width:356px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<!--热卖推荐begin-->
+<div class="content main no_padding hot_sale relative mart10">
+    <span class="floatleft block hot_tag font16 aligncenter">热<br>卖<br>推<br>荐</span>
+    <ul class="hot_sale_list floatleft p_top15" title="这里的商品图片是白底116*116的">
+        <li class="clearfix">
+            <span class="block floatleft"><img src="../img/p_img/p_white_116_116_1.jpg"></span>
+            <p class="p_top10 color_3">巨氧负氢离子护颈巨氧负氢离子护颈</p>
+            <p class="p_price mart10">￥399<span class="line-through">￥980</span></p>
+            <p class="mart15"><a href="#" class="el-button--buy el-button--small"><span>立即抢购</span></a></p>
+        </li>
+        <li class="clearfix">
+            <span class="block floatleft"><img src="../img/p_img/p_white_116_116_2.jpg"></span>
+            <p class="p_top10 color_3">巨氧负氢离子护颈巨氧负氢离子护颈</p>
+            <p class="p_price mart10">￥399<span class="line-through">￥980</span></p>
+            <p class="mart15"><a href="#" class="el-button--buy el-button--small"><span>立即抢购</span></a></p>
+        </li>
+        <li class="clearfix">
+            <span class="block floatleft"><img src="../img/p_img/p_white_116_116_3.jpg"></span>
+            <p class="p_top10 color_3">巨氧负氢离子护颈巨氧负氢离子护颈</p>
+            <p class="p_price mart10">￥399<span class="line-through">￥980</span></p>
+            <p class="mart15"><a href="#" class="el-button--buy el-button--small"><span>立即抢购</span></a></p>
+        </li>
+    </ul>
+    <div class="floatright alignright marr20 mart50">
+        <p class="font14 color_grey">降价倒计时</p>
+        <p class="p_price font26 mart15"><span>23</span>:<span>34</span>:<span>56</span></p>
+    </div>
+</div>
+<!--热卖推荐over-->
+<!--面包屑begin-->
+<div class="content breadcrumb font18">
+    <a href="#">首页</a>
+    <span>&gt;</span>
+    <div class="el-select inlineblock">
+        <div class="el-input">
+            <i class="el-input__icon el-icon-caret-top"></i>
+            <input type="text" placeholder="请选择" readonly="readonly" autocomplete="off" class="el-input__inner" value="生态产品">
+        </div>
+    </div>
+    <span>&gt;</span>
+    <div class="el-select inlineblock">
+        <div class="el-input">
+            <i class="el-input__icon el-icon-caret-top"></i>
+            <input type="text" placeholder="请选择" readonly="readonly" autocomplete="off" class="el-input__inner" value="居家用品">
+        </div>
+    </div>
+</div>
+<!--面包屑over-->
+<!--商品检索begin-->
+<div class="content">
+    <div class="selector relative">
+        <a href="#" class="selector_more current" title="点击加current">更多选项<i class="el-icon-arrow-down marl5"></i></a>
+        <div class="J_selectorLine s-top color_3 font14"><span class="p_price">“居家”</span>商品筛选 <span class="color_grey marl20 font12">共 234 件商品</span></div>
+        <div class="J_selectorLine s-brand">
+            <div class="sl-wrap clearfix">
+                <div class="sl-key"><strong>品牌：</strong></div>
+                <div class="sl-value">
+                    <div class="sl-v-list">
+                        <ul class="J_valueList clearfix">
+                            <li><a href="#">巨氧超宝</a></li>
+                            <li><a href="#">小米（MI）</a></li>
+                            <li><a href="#">云麦（YUNMAI）</a></li>
+                            <li><a href="#">PICOOC</a></li>
+                            <li><a href="#">麦开（Moikit）</a></li>
+                            <li><a href="#">汉王（Hanvon）</a></li>
+                            <li><a href="#">华为（HUAWEI）</a></li>
+                            <li><a href="#">Fitbit</a></li>
+                            <li><a href="#">乐心（lifesense）</a></li>
+                            <li><a href="#">米家（MIJIA）</a></li>
+                            <li><a href="#">MOPS</a></li>
+                            <li><a href="#">Sleepace</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-ext">
+                    <a class="sl-e-more J_extMore" href="javascript:;">更多<i class="el-icon-arrow-down"></i></a>
+                    <a class="sl-e-multiple J_extMultiple" href="javascript:;">多选<i class="el-icon-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="J_selectorLine s-line">
+            <div class="sl-wrap clearfix">
+                <div class="sl-key"><strong>生活用品：</strong></div>
+                <div class="sl-value">
+                    <div class="sl-v-list">
+                        <ul class="J_valueList clearfix">
+                            <li><a href="#">收纳用品</a></li>
+                            <li><a href="#">浴室用品</a></li>
+                            <li><a href="#">洗晒／熨烫</a></li>
+                            <li><a href="#">保暖防护</a></li>
+                            <li><a href="#">净化除味</a></li>
+                            <li><a href="#">雨伞用具</a></li>
+                            <li><a href="#">针织用品</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-ext">
+                    <a class="sl-e-more J_extMore" href="javascript:;">更多<i class="el-icon-arrow-down"></i></a>
+                    <a class="sl-e-multiple J_extMultiple" href="javascript:;">多选<i class="el-icon-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="J_selectorLine s-line">
+            <div class="sl-wrap clearfix">
+                <div class="sl-key"><strong>保健器械：</strong></div>
+                <div class="sl-value">
+                    <div class="sl-v-list">
+                        <ul class="J_valueList clearfix">
+                            <li><a href="#">养生器械</a></li>
+                            <li><a href="#">血糖仪</a></li>
+                            <li><a href="#">智能健康</a></li>
+                            <li><a href="#">家庭护理</a></li>
+                            <li><a href="#">理疗仪</a></li>
+                            <li><a href="#">体重称</a></li>
+                            <li><a href="#">血压计</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-ext">
+                    <a class="sl-e-more J_extMore" href="javascript:;">更多<i class="el-icon-arrow-down"></i></a>
+                    <a class="sl-e-multiple J_extMultiple" href="javascript:;">多选<i class="el-icon-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="J_selectorLine s-line">
+            <div class="sl-wrap clearfix">
+                <div class="sl-key"><strong>价格：</strong></div>
+                <div class="sl-value">
+                    <div class="sl-v-list">
+                        <ul class="J_valueList clearfix">
+                            <li><a href="#">0-19</a></li>
+                            <li><a href="#">20-39</a></li>
+                            <li><a href="#">40-49</a></li>
+                            <li><a href="#">50-69</a></li>
+                            <li><a href="#">70-100</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-ext clearfix" style="width: auto">
+                    <div class="inline-input el-input el-input--small width-70 inlineblock"><input type="text" placeholder="" class="el-input__inner"></div>
+                    <span>-</span>
+                    <div class="inline-input el-input el-input--small width-70 inlineblock"><input type="text" placeholder="" class="el-input__inner"></div>
+                    <button type="button" class="el-button el-button--buy el-button--small floatright "><span>确定</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--商品检索over-->
+<div class="content mart50 clearfix">
+    <!--商品精选广告推广begin-->
+    <div class="m-aside floatleft">
+        <p class="title alignright clearfix">
+            <span class="font14 floatleft color_3">商品精选</span>
+            <span class="color_grey">广告推广</span>
+        </p>
+        <ul class="m-aside_list mart15">
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_230_140_10.jpg" width="100%"></p>
+                    <p class="mart20">巨氧负氢离子水巨氧负氢离子水巨氧负氢离子水</p>
+                    <p class="p_price font14 mart15">￥2356</p>
+                    <p class="mart10 color_8">已有 <span class="color_3">245</span> 人评价</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_230_140_2.jpg" width="100%"></p>
+                    <p class="mart20">巨氧负氢离子水巨氧负氢离子水巨氧负氢离子水</p>
+                    <p class="p_price font14 mart15">￥2356</p>
+                    <p class="mart10 color_8">已有 <span class="color_3">245</span> 人评价</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_230_140_5.jpg" width="100%"></p>
+                    <p class="mart20">巨氧负氢离子水巨氧负氢离子水巨氧负氢离子水</p>
+                    <p class="p_price font14 mart15">￥2356</p>
+                    <p class="mart10 color_8">已有 <span class="color_3">245</span> 人评价</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--商品精选广告推广over-->
+    <div class="m-main">
+        <div class="top_select">
+            <div class="top_select_top clearfix alignright">
+                <div class="floatleft">
+                    <a href="#" class="current">综合排序</a>
+                    <a href="#">销量</a>
+                    <a href="#">评论数</a>
+                    <a href="#" class="price-up" title="升序加price-up">价格<i class="el-icon-arrow-down marl5"></i></a>
+                </div>
+                <span class="color_8">共 <i class="color_3">107.4万</i> 件商品</span>
+                <div class="page_right inlineblock marl20">
+                    <a href="#"><i class="el-icon-arrow-left"></i></a>
+                    <span><em class="p_price">1</em>/<span>100</span></span>
+                    <a href="#"><i class="el-icon-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="top_select_bt">
+                <span class="marl15">配送至</span>
+                <div class="el-select inlineblock marl6">
+                    <div class="el-input">
+                        <i class="el-input__icon el-icon-arrow-up"></i>
+                        <input type="text" placeholder="请选择" readonly="readonly" autocomplete="off" class="el-input__inner" value="北京朝阳区三环以内">
+                    </div>
+                </div>
+                <div class="el-checkbox-group inlineblock marl20">
+                    <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" class="el-checkbox__original" value="包邮"></span><span class="el-checkbox__label">包邮</span></label>
+                    <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" class="el-checkbox__original" value="货到付款"></span><span class="el-checkbox__label">货到付款</span></label>
+                    <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner is-checked"></span><input type="checkbox" class="el-checkbox__original" value="仅显示有货"></span><span class="el-checkbox__label">仅显示有货</span></label>
+                    <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" class="el-checkbox__original" value="促销"></span><span class="el-checkbox__label"><img src="../img/p_img/c.jpg"></span></label>
+                </div>
+            </div>
+        </div>
+        <ul class="product_list product_list_ul lthei mart20 clearfix">
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_1.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_3.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_3.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+            <li>
+                <a href="#" class="block">
+                    <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                    <p class="mart20 alignright clearfix">
+                        <span class="font16 p_price floatleft">￥2400</span>
+                        <span class="you marl5 floatleft">包邮</span>
+                        <span class="color_grey"><em class="color_3 marr5">2345</em>人评价</span>
+                    </p>
+                    <p class="p_name font12 mart10">［包邮特价］巨氧负氢离子护颈治疗颈椎病预防关节炎</p>
+                </a>
+                <p class="alignright clearfix">
+                    <a href="#" class="floatleft no_padding color_8">巨氧超宝旗舰店</a>
+                    <span class="color_8">深圳</span>
+                </p>
+            </li>
+        </ul>
+        <div class="el-pagination alignright">
+            <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+            <ul class="el-pager">
+                <li class="number">1</li>
+                <li class="number">2</li>
+                <li class="number">3</li>
+                <li class="number active">4</li>
+            </ul>
+            <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+            <span class="el-pagination__total color_grey">共 400 页</span>
+            <span class="el-pagination__jump color_grey">到第<input type="number" min="1" number="true" class="el-pagination__editor" style="width:50px;">页</span>
+            <button type="button" class="el-button el-button--buy el-button--mini"><span>确定</span></button>
+        </div>
+    </div>
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

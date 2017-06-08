@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>未处理投诉</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">未处理投诉</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form el-form--inline clearfix">
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:80px;">投诉类型</label>
+                        <div class="el-form-item__content" style="margin-left:80px;">
+                            <select class="admin_select width-100">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar">
+                        <label class="el-form-item__label" style="width:80px;">商铺名称</label>
+                        <div class="el-form-item__content" style="margin-left:80px;">
+                            <div class="el-input width-160"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                        </div>
+                    </div>
+                    <div class="el-form-item nomar floatright">
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-80"><span>搜索</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <table class="table_cell mart10">
+                <colgroup>
+                    <col width="12%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="12%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>投诉编号</th>
+                    <th>投诉类型</th>
+                    <th>商铺名称</th>
+                    <th>投诉人</th>
+                    <th>联系电话</th>
+                    <th>投诉时间</th>
+                    <th>处理时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="color_link">cd23456565</span></td>
+                        <td>退款</td>
+                        <td>刘德华旗舰店</td>
+                        <td>刘德华</td>
+                        <td>1875532673</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td class="aligncenter">
+                            <button type="button" class="el-button el-button--text"><span>查看</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="color_link">cd23456565</span></td>
+                        <td>退款</td>
+                        <td>刘德华旗舰店</td>
+                        <td>刘德华</td>
+                        <td>1875532673</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td class="aligncenter">
+                            <button type="button" class="el-button el-button--text"><span>查看</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="color_link">cd23456565</span></td>
+                        <td>退款</td>
+                        <td>刘德华旗舰店</td>
+                        <td>刘德华</td>
+                        <td>1875532673</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td>2016-12-07 19:54:08</td>
+                        <td class="aligncenter">
+                            <button type="button" class="el-button el-button--text"><span>查看</span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="el-pagination mart20 alignright">
+                <button class="btn-prev disabled"><i class="el-icon el-icon-arrow-left"></i></button>
+                <ul class="el-pager">
+                    <li class="number active">1</li>
+                    <li class="number">2</li>
+                    <li class="number">3</li>
+                    <li class="number">4</li>
+                    <li class="el-icon more btn-quickprev el-icon-more"></li>
+                    <li class="number">20</li>
+                </ul>
+                <button class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

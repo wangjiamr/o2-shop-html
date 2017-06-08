@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>店铺收益</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:80px;background: #0085d7;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;}
+        .b_nav{height: 30px;}
+        .b_nav a{display: inline-block;height: 30px;line-height: 30px;color: #333;padding: 0 20px;border-radius:4px;}
+        .b_nav a:hover,.b_nav a.current{background: #0085d7;color:#fff;}
+        .b_table_top td{border:1px solid #e0e0e0;vertical-align: top;width:33%;height: 70px;padding-top:20px;text-indent: 20px;color:#888;}
+        .order-tb thead th{line-height:50px;background: #fafafa;color:#333;}
+        .order-tb th,.order-tb td{text-indent:0;}
+        .order-tb tbody tr{border: 1px solid #e0e0e0;}
+        .order-tb tbody tr.sep-row{border: 0;}
+        .order-tb tbody tr.sep-row td{padding-left: 20px;}
+        .order-tb tbody td,.order-tb tbody th{border:0;border-bottom: 1px dotted #e0e0e0;vertical-align:top;padding: 15px 0;color: #333;}
+        .order-tb tbody th{border-width:0}
+        .order-tb th.th-1{border-left-width: 1px;padding-left: 20px;}
+        /*.order-tb tbody{border-bottom: 1px solid #e0e0e0;}*/
+        .col-1{width:30px;}
+        .col-2{width:500px;}
+        .col-3{width:150px;}
+        .col-4{width:110px;}
+        .col-5{width:110px;}
+        .order-tb .tr-th td{background: #fafafa;border: 1px solid #e0e0e0;line-height:38px;padding: 0;}
+        .order-tb .tr-th td a{padding: 0;color: #333;}
+        .order-tb tbody .sep-row td{height:10px;border: 0;padding: 0;}
+        .order-tb tbody a{color:#888;padding:3px 0;display: inline-block;text-indent: 0;}
+        .order-tb tbody a:hover,.order-tb tbody .order_one a:hover,.order-bottom a:hover{color:#75bb29;}
+        .order-tb td p{line-height: 16px;}
+        .order-tb td.td_1{vertical-align:middle;text-indent: 0;text-align: center;border-right: 1px solid #e0e0e0;background: #fafafa;font-weight: bold;}
+        .order-tb td p .btn-take{padding: 0 10px;background: #fff;line-height: 24px;margin-top: 10px;}
+        .order_one p a{color:#333;}
+        .order_img{border: 1px solid #e0e0e0;margin-left:20px;}
+        .order_img,.order_img img{width: 78px;height: 78px;text-indent: 0;}
+        .order_img + div{width:280px;word-break: break-all;word-wrap: break-word;line-height:18px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#" class="current">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="b_nav clearfix">
+            <a href="#" class="current">本月</a>
+            <a href="#">近30天</a>
+            <a href="#">近半年</a>
+            <a href="#">今年</a>
+        </div>
+        <table class="b_table_top lthei mart20" width="100%">
+            <tr>
+                <td>
+                    <p>预计销售额</p>
+                    <p class="font22 color_theme mart20">300,000.00</p>
+                </td>
+                <td>
+                    <p>成功订单数</p>
+                    <p class="font22 color_theme mart20">34</p>
+                </td>
+                <td>
+                    <p>商品销售总量</p>
+                    <p class="font22 color_theme mart20">320,000.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>累计退款额</p>
+                    <p class="font22 color_theme mart20">3,453.00</p>
+                </td>
+                <td>
+                    <p>退款订单数</p>
+                    <p class="font22 color_theme mart20">4</p>
+                </td>
+                <td>
+                    <p>商品退货量</p>
+                    <p class="font22 color_theme mart20">300</p>
+                </td>
+            </tr>
+        </table>
+        <div class="mart40 lthei">
+            <p class="font14 color_3">一周销售额</p>
+            <div class="mart10">
+                <p><img src="../img/p_img/zx.jpg"></p>
+            </div>
+        </div>
+        <div class="mart40">
+            <div class="b_nav clearfix">
+                <a href="#" class="current">一周销量前十</a>
+                <a href="#">一周销售额前十</a>
+            </div>
+            <table class="order-tb mart20" width="100%">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                    <col class="col-6">
+                    <col class="col-7">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="th-1"></th>
+                    <th style="text-indent: 100px;">商品信息</th>
+                    <th>单价</th>
+                    <th>销量</th>
+                    <th>销售额</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="sep-row"><td colspan="5"></td></tr>
+                    <tr>
+                        <td class="td_1"><span class="color_theme">1</span></td>
+                        <td>
+                            <div class="order_one clearfix floatleft">
+                                <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                                <div class="floatleft marl20">
+                                    <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                    <p class="color_8 mart10">
+                                        <span>分类：U型枕</span>
+                                        <span>颜色：蓝色</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>￥299.00</td>
+                        <td>9227</td>
+                        <td><p class="color_3">￥598.00</p></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                <tr class="sep-row"><td colspan="5"></td></tr>
+                <tr>
+                    <td class="td_1"><span class="color_theme">2</span></td>
+                    <td>
+                        <div class="order_one clearfix floatleft">
+                            <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <div class="floatleft marl20">
+                                <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                <p class="color_8 mart10">
+                                    <span>分类：U型枕</span>
+                                    <span>颜色：蓝色</span>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>￥299.00</td>
+                    <td>9227</td>
+                    <td><p class="color_3">￥598.00</p></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr class="sep-row"><td colspan="5"></td></tr>
+                <tr>
+                    <td class="td_1"><span class="color_theme">3</span></td>
+                    <td>
+                        <div class="order_one clearfix floatleft">
+                            <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <div class="floatleft marl20">
+                                <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                <p class="color_8 mart10">
+                                    <span>分类：U型枕</span>
+                                    <span>颜色：蓝色</span>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>￥299.00</td>
+                    <td>9227</td>
+                    <td><p class="color_3">￥598.00</p></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr class="sep-row"><td colspan="5"></td></tr>
+                <tr>
+                    <td class="td_1"><span class="">4</span></td>
+                    <td>
+                        <div class="order_one clearfix floatleft">
+                            <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <div class="floatleft marl20">
+                                <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                <p class="color_8 mart10">
+                                    <span>分类：U型枕</span>
+                                    <span>颜色：蓝色</span>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>￥299.00</td>
+                    <td>9227</td>
+                    <td><p class="color_3">￥598.00</p></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr class="sep-row"><td colspan="5"></td></tr>
+                <tr>
+                    <td class="td_1"><span class="">5</span></td>
+                    <td>
+                        <div class="order_one clearfix floatleft">
+                            <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <div class="floatleft marl20">
+                                <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                <p class="color_8 mart10">
+                                    <span>分类：U型枕</span>
+                                    <span>颜色：蓝色</span>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>￥299.00</td>
+                    <td>9227</td>
+                    <td><p class="color_3">￥598.00</p></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr class="sep-row"><td colspan="5"></td></tr>
+                <tr>
+                    <td class="td_1"><span class="">6</span></td>
+                    <td>
+                        <div class="order_one clearfix floatleft">
+                            <span class="order_img floatleft"><img src="../img/p_img/p_80_80_2.jpg"></span>
+                            <div class="floatleft marl20">
+                                <p><a href="#">巨氧超宝 汽车头枕护颈枕垫 车用U型枕靠居家旅行头枕 融暄天竺棉 条纹四色可选</a></p>
+                                <p class="color_8 mart10">
+                                    <span>分类：U型枕</span>
+                                    <span>颜色：蓝色</span>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>￥299.00</td>
+                    <td>9227</td>
+                    <td><p class="color_3">￥598.00</p></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

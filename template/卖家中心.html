@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>卖家中心</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:80px;background: #0085d7;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;}
+        .b_table_top{width:478px;height:318px;}
+        .b_table_top td{border:1px solid #e0e0e0;vertical-align: top;width:33%;height: 70px;padding-top:20px;text-indent:10px;color:#888;}
+        .info_box2{border:1px solid #e0e0e0;padding:20px;height:100px;color:#333;overflow: hidden;}
+        .info_box2 div.floatleft{width:520px;height:100px;border-right:1px solid #e0e0e0;}
+        .store_img{width: 100px;height:100px;line-height:100px;background: #fafafa;display: table-cell;}
+        .store_img img{width: 100%;}
+        .info_box2 .el-rate{float: left;}
+        .info_box3{border:1px solid #e0e0e0;width:476px;height:316px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#" class="current">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="info_box2 clearfix">
+            <div class="floatleft lthei clearfix marr20">
+                <span class="store_img floatleft marr20"><img src="../img/p_img/logo.jpg"></span>
+                <p class="font16">巨氧超宝官方旗舰店</p>
+                <p class="color_8 mart20">
+                    <a href="#">店铺设置</a>
+                    <span class="marl10 marr10">|</span>
+                    <a href="#">查看店铺</a>
+                </p>
+                <p class="mart10"><span class="color_8">我的账户：</span><span>正常</span></p>
+                <p class="mart10"><span class="color_8">消保服务：</span><span>保证金1000元</span></p>
+            </div>
+            <div>
+                <p class="font14">店铺综合评分</p>
+                <div class="clearfix mart30">
+                    <div class="el-rate inlineblock">
+                        <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#ec6941;"></i></span>
+                        <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#ec6941;"></i></span>
+                        <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#ec6941;"></i></span>
+                        <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style="color:#ec6941;"></i></span>
+                        <span class="el-rate__item" style="cursor: auto;"><i class="el-rate__icon el-icon-star-on" style=""></i></span>
+                    </div>
+                    <span class="font30 strong marl20" style="color: #ec6941;">4.8</span>
+                </div>
+            </div>
+        </div>
+        <div class="mart30 lthei clearfix">
+            <div class="floatleft">
+                <p class="font14 color_3">交易概况</p>
+                <div class="info_box3 mart10">
+                    <p><img src="../img/p_img/111.jpg"></p>
+                </div>
+            </div>
+            <div class="floatright">
+                <p class="font14 color_3">纠纷数据</p>
+                <table class="b_table_top mart10" width="100%">
+                    <tr>
+                        <td>
+                            <p>近30天纠纷退款率</p>
+                            <p class="font22 color_theme mart25">0.0000%</p>
+                            <p class="mart25">主营类目均值：0.0054%</p>
+                            <p class="mart10">纠纷笔数：0</p>
+                        </td>
+                        <td>
+                            <p>近30天退款速度</p>
+                            <p class="font22 color_theme mart25">0.0</p>
+                            <p class="mart25">主营类目均值：0.0054%</p>
+                        </td>
+                        <td>
+                            <p>近30天退款率</p>
+                            <p class="font22 color_theme mart25">0.0000%</p>
+                            <p class="mart25">主营类目均值：4.4211%</p>
+                            <p class="mart10">退款笔数：0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>近30天品质退款率</p>
+                            <p class="font22 color_theme mart20">0.002%</p>
+                            <p class="mart25">主营类目均值：0.1406%</p>
+                            <p class="mart10">品质退款笔数：0</p>
+                        </td>
+                        <td>
+                            <p>近30天投诉率</p>
+                            <p class="font22 color_theme mart20">0.0054%</p>
+                            <p class="mart25">投诉笔数：0</p>
+                        </td>
+                        <td>
+                            <p class="mart50 aligncenter"><a href="#" class="color_theme">查看指标定义</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

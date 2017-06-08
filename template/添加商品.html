@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{height:80px;background: #0085d7;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .add_form .el-form-item .el-input,.add_form .el-form-item .el-form-item__label{font-size: 12px!important;}
+        .add_form .el-form-item .el-form-item__label{color:#888;width: 120px;}
+        .add_form .el-form-item .el-form-item__content{margin-left:120px;}
+        .add_form .el-input__inner,.add_form .el-textarea__inner{border-radius: 0;font-size:12px;resize: none;}
+        .add_form .el-input__inner:focus,.add_form .el-textarea__inner:focus{border-color:#0085d7;}
+        .add_form .el-form-item{margin: 0;margin-top:20px;}
+        .add_form tbody .el-input__inner{border:0;}
+        .add_form .el_info{color: #b0b0b0;}
+        .add_form .el-dragger{width: 98px;height: 98px;border-radius:0;background: #fff;margin-right:20px;}
+        .add_form .el-dragger i{margin:42px 0 10px 0;}
+        .add_form .el-dragger p{line-height:22px;background: url("../img/mask50.png") repeat;color:#fff;position: absolute;top:-1px;left:-1px;right: -1px;}
+        .add_form .el-upload__input,.add_form .el-dragger .el-upload__files{width: 98px;height: 98px;display: block;position:absolute;top:0;left: 0;opacity: 0;}
+        .add_form .el-dragger .el-upload__files{opacity: 1;margin: 0;}
+        .add_form .el-dragger .el-upload__files li{display: table-cell;width: 98px;height: 98px;}
+        .add_form .el-dragger .el-upload__files li img{width:80px;margin-top:10px;vertical-align: middle;}
+        .add_form .el-checkbox-group{line-height: 36px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#" class="current">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right clearfix">
+        <div class="clearfix">
+            <form class="el-form add_form floatleft">
+                <p class="font14 color_3 mart20">商品基本信息</p>
+                <div class="el-form-item is-error is-required">
+                    <label class="el-form-item__label">活动名称：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-input" style="width:700px;">
+                            <input type="text" autocomplete="off" class="el-input__inner">
+                        </div>
+                        <div class="el-form-item__error">请输入密码</div>
+                    </div>
+                    <span class="el_info marl5">1/60</span>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label">商品卖点：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-textarea" style="width:700px;"><textarea rows="3" class="el-textarea__inner"></textarea></div>
+                    </div>
+                    <span class="el_info v-top marl5">1/60</span>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label">商品定制：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <label class="el-checkbox">
+                            <span class="el-checkbox__input is-checked">
+                                <span class="el-checkbox__inner"></span>
+                                <input type="checkbox" name="type" class="el-checkbox__original" value="请按照营业执照上登记的法人填写">
+                            </span>
+                            <span class="el-checkbox__label">请按照营业执照上登记的法人填写</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">电脑端宝贝图片：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-upload__inner el-dragger">
+                            <i class="el-icon-plus font16"></i>
+                            <p>商品主图</p>
+                            <input type="file" multiple="multiple" class="el-upload__input">
+                        </div>
+                        <div class="el-upload__inner el-dragger">
+                            <i class="el-icon-plus font16"></i>
+                            <input type="file" multiple="multiple" class="el-upload__input">
+                        </div>
+                        <div class="el-upload__inner el-dragger">
+                            <i class="el-icon-plus font16"></i>
+                            <input type="file" multiple="multiple" class="el-upload__input">
+                        </div>
+                        <div class="el-upload__inner el-dragger">
+                            <i class="el-icon-plus font16"></i>
+                            <input type="file" multiple="multiple" class="el-upload__input">
+                        </div>
+                        <div class="el-upload__inner el-dragger">
+                            <i class="el-icon-plus font16"></i>
+                            <p>商品白底图</p>
+                            <input type="file" multiple="multiple" class="el-upload__input">
+                            <ul class="el-upload__files" style="display: none">
+                                <li><img src="../img/p_img/p_80_80_2.jpg"></li>
+                            </ul>
+                        </div>
+                        <div class="el-form-item__info" style="position: inherit;left:0;line-height: 20px;">
+                            <p>商品主图大小不能超过3MB；700*700 以上图片上传后商品详情页自动提供放大镜功能。第五张图发商品白底图可增加首页曝光机会 </p>
+                        </div>
+                        <div class="el-form-item__error">错误信息</div>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">价格及库存：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 100%;">
+                            <div class="hidden-columns">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width:600px;">
+                                    <colgroup>
+                                        <col name="el-table_1_column_7" width="150">
+                                        <col name="el-table_1_column_8" width="150">
+                                        <col name="el-table_1_column_9" width="150">
+                                        <col name="el-table_1_column_9" width="150">
+                                        <col name="gutter" width="">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_7 is-leaf"><div class="cell">价格</div></th>
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_8 is-leaf"><div class="cell">库存</div></th>
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_9 is-leaf"><div class="cell">商家编码</div></th>
+                                        <th colspan="1" rowspan="1" class="el-table_1_column_9 is-leaf"><div class="cell">商品条形码</div></th>
+                                        <th class="gutter" style="width: 0px;"></th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 600px;">
+                                    <colgroup>
+                                        <col width="150">
+                                        <col width="150">
+                                        <col width="150">
+                                        <col width="150">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="">
+                                        <td class=""><div class=""><div class="el-input"><input type="text" placeholder="请输入内容" autocomplete="off" class="el-input__inner"></div></div></td>
+                                        <td class=""><div class=""><div class="el-input"><input type="text" placeholder="请输入内容" autocomplete="off" class="el-input__inner"></div></div></td>
+                                        <td class=""><div class=""><div class="el-input"><input type="text" placeholder="请输入内容" autocomplete="off" class="el-input__inner"></div></div></td>
+                                        <td class=""><div class=""><div class="el-input"><input type="text" placeholder="请输入内容" autocomplete="off" class="el-input__inner"></div></div></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">采购地：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-radio-group">
+                            <label class="el-radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">国内</span>
+                            </label>
+                            <label class="el-radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">海外及港澳台</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">付款模式：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-radio-group">
+                            <label class="el-radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">一口价</span>
+                            </label>
+                            <label class="el-radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">线上付订金，线下付尾款</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">电脑端描述：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        dnfdjbkfjbkdfnjk
+                    </div>
+                </div>
+                <p class="font14 color_3 mart20">商品物流信息</p>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">付款模式：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-checkbox-group">
+                            <label class="el-checkbox">
+                                <span class="el-checkbox__input is-checked">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="物流配送"></span>
+                                <span class="el-checkbox__label">物流配送</span>
+                            </label>
+                            <label class="el-checkbox">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="自提">
+                                </span>
+                                <span class="el-checkbox__label">自提</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="font14 color_3 mart20">售后保障信息</p>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">付款模式：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-checkbox-group">
+                            <label class="el-checkbox block">
+                                <span class="el-checkbox__input is-checked">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="提供发票"></span>
+                                <span class="el-checkbox__label">提供发票</span>
+                            </label>
+                            <label class="el-checkbox block">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="保修服务">
+                                </span>
+                                <span class="el-checkbox__label">保修服务</span>
+                            </label>
+                            <label class="el-checkbox block">
+                                <span class="el-checkbox__input is-checked">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="退换货承诺：若存在质量问题或与描述不符，本店将主动提供退换货服务并承担来回邮费"></span>
+                                <span class="el-checkbox__label">退换货承诺：若存在质量问题或与描述不符，本店将主动提供退换货服务并承担来回邮费</span>
+                            </label>
+                            <label class="el-checkbox block">
+                                <span class="el-checkbox__input">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" name="type" class="el-checkbox__original" value="服务承诺：该类商品，必须支持【七天退货】服务">
+                                </span>
+                                <span class="el-checkbox__label">服务承诺：该类商品，必须支持【七天退货】服务</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="font14 color_3 mart20">宝贝其他信息</p>
+                <div class="el-form-item">
+                    <label class="el-form-item__label">库存技术：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-radio-group">
+                            <label class="el-radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">买家拍下减库存</span>
+                            </label>
+                            <label class="el-radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">买家付款减库存</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item is-required">
+                    <label class="el-form-item__label">上架时间：</label>
+                    <div class="el-form-item__content inlineblock nomarl">
+                        <div class="el-radio-group">
+                            <label class="el-radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">立刻上架</span>
+                            </label>
+                            <label class="el-radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">定时上架</span>
+                            </label>
+                            <label class="el-radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="">
+                                </span>
+                                <span class="el-radio__label">放入仓库</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="p_line mart20"></div>
+        <p class="aligncenter mart20">
+            <button type="button" class="el-button el-button--primary"><span>保存并发布</span></button>
+        </p>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

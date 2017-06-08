@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品设置</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">商品设置</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form">
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;">商品列表显示设置：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <label class="el-radio radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">按SKU显示</span>
+                            </label>
+                            <label class="el-radio radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">按SPU显示</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width: 140px;">商品评论审核设置：</label>
+                        <div class="el-form-item__content" style="margin-left: 140px;">
+                            <label class="el-radio radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">不需要审核评论立即生效</span>
+                            </label>
+                            <label class="el-radio radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">需要管理员审核后生效</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;">商品销售量显示设置：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <label class="el-checkbox">
+                                <span class="el-checkbox__input is-checked">
+                                    <span class="el-checkbox__inner"></span>
+                                    <input type="checkbox" class="el-checkbox__original" value="">
+                                </span>
+                                <span class="el-checkbox__label">近三个月商品销量</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;">商品列表显示设置：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <p>
+                                <label class="el-checkbox">
+                                    <span class="el-checkbox__input is-checked">
+                                        <span class="el-checkbox__inner"></span>
+                                        <input type="checkbox" class="el-checkbox__original" value="">
+                                    </span>
+                                    <span class="el-checkbox__label">商品默认好评</span>
+                                </label>
+                            </p>
+                            <div class="color_cross" title="去掉color_cross，字体变亮">
+                                <div>
+                                    <span> 订单已确认收货后，</span>
+                                    <div class="el-input width-80"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                                    <span>(限填1-30) 天内未评价，商品默认好评。默认好评提示语：用户未及时作出评论，默认好评~</span>
+                                </div>
+                                <div class="mart10">
+                                    <span> 默认好评提示语：</span>
+                                    <div class="el-textarea inlineblock width-200 aligntop"><textarea placeholder="" rows="2" class="el-textarea__inner"></textarea></div>
+                                    <span>(限填10-50字符， 已填20字符)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;"></label>
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-80"><span>保存设置</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

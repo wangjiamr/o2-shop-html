@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>付款</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .header{height: 120px;overflow: hidden;}
+        .header_main{height:80px;background: #fff;}
+        /*.header_main .header_logo img{height: 80px;}*/
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .header_main .color_3{line-height:80px;font-weight: bold;}
+        .item_bg{background: #fff8f8;padding:20px 40px;line-height: 24px;color:#514848;}
+        .btn-pay{width:158px;height:48px;line-height:48px;font-size:14px;color:#888;border: 1px solid #e0e0e0;}
+        .btn-pay:hover,.btn-pay.current{background: #75bb29;border-color: #75bb29;color: #fff;}
+        .info_box{padding: 25px 0 20px 100px;}
+        .code,.code img{width:300px;height:300px;}
+        .code_p{width:300px;height:60px;text-indent:135px;background: #75bb29 url("../img/s.png") no-repeat 60px center;color: #fff;}
+        .code_p p{padding-top:10px;}
+        .s_code{position: relative;top:-30px;right: -50px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+            <span class="floatleft lthei color_3 font24 marl5">收银台</span>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content mart30 clearfix">
+    <div class="main_inner">
+        <div class="item_bg lthei">
+            <p class="font14 clearfix alignright">
+                <span class="floatleft">请您及时付款，以便订单尽快处理！ 订单号：46665802809</span>
+                <span>实付金额<em class="font16 p_price">￥8376</em></span>
+            </p>
+            <p class="p_line_dot mart10 marbt10"></p>
+            <p class="color_8 ">
+                <span>寄送至：</span>
+                <span class="color_3">北京市朝阳区东四环中路58号远洋国际中心D座2203室</span>
+            </p>
+            <p class="color_8 ">
+                <span>收件人：</span>
+                <span class="color_3">王大锤  186****6666</span>
+            </p>
+        </div>
+        <div class="mart40">
+            <p>
+                <a href="#" class="btn btn-pay current marr20"><i class="iconfont font30 icon-wechat_F marr10 v-middle"></i>微信支付</a>
+                <a href="#" class="btn btn-pay"><i class="iconfont font30 icon-alipay_F marr10 v-middle"></i>支付宝支付</a>
+            </p>
+            <div class="info_box mart20">
+                <p class="color_3">二维码已过期，刷新页面<a href="#" class="a_link">重新获取</a>二维码。</p>
+                <div class="clearfix mart20">
+                    <div class="floatleft">
+                        <div class="code"><img src="../img/p_img/code.jpg"></div>
+                        <div class="code_p font14 mart10">
+                            <p>请使用微信扫一扫</p>
+                            <p>扫描二维码支付</p>
+                        </div>
+                    </div>
+                    <span class="s_code"><img src="../img/s_code.jpg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

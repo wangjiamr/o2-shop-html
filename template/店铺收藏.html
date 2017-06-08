@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>收藏店铺</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        .header{height: 140px;overflow: hidden;}
+        .header_main{height:100px;background: #fff;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .tabs_nav_t .el-autocomplete .el-input__icon{background: #fff;color: #888;}
+        .order-bottom{background: #fafafa;padding:10px;}
+        .order-bottom li{width:140px;float: left;margin:10px 0 10px 20px;}
+        .order-bottom li a{color: #888;}
+        .stores_mark{border: 1px solid #e0e0e0;}
+        .stores_l{width: 258px;height: 258px;border-right: 1px solid #e0e0e0;}
+        .stores_items{width:100%;line-height:38px;position: absolute;top:0;left:0;}
+        .stores_bt{bottom: 0;top:inherit;border-top:1px solid #e0e0e0;}
+        .stores_items span{display: inline-block;width:49%;float: left;}
+        .stores_bt span{width:50%;border-left: 1px solid #e0e0e0;margin-left: -1px;background: #fafafa;}
+        .stores_bt span a{display:block;line-height: 38px;color: #888;}
+        .stores_bt span a:hover{color: #75bb29;}
+        .stores_logo{height:100px;padding-top: 40px;}
+        .stores_logo img{width:200px;}
+        .stores_r{margin-left:280px;}
+        .stores_r dl dd{float: left;}
+        .stores_r dl dd a{width:58px;height:28px;line-height:28px;display: inline-block;border: 1px solid #e0e0e0;text-align: center;margin-left: -1px;}
+        .stores_r dl dd a:hover,.stores_r dl dd.current a{border-color: #75bb29;color: #75bb29;position: relative;z-index: 1;}
+        .stores_r .v-middle{display:inline-block;height:28px;line-height:28px;}
+        .stores_r_t{height: 30px;}
+        .stores_p_list{margin-right:20px;height:140px;overflow: hidden;}
+        .stores_p_list ul{width: 9999px;position: relative;transition: 0.4s;}
+        .stores_p_list li{width:150px;height:140px;text-align: center;float: left;}
+        .stores_p_list li img{width: 100px;}
+
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo.jpg"></a>
+            <div class="el-autocomplete my-autocomplete floatright mart30" style="width:365px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content mart30 clearfix">
+    <div class="tabs_nav_t clearfix">
+        <ul class="floatleft clearfix lthei font16">
+            <li><a href="#">宝贝收藏</a></li>
+            <li class="current"><a href="#">店铺收藏</a></li>
+        </ul>
+        <div class="el-autocomplete floatright" style="width:200px;">
+            <div class="el-input">
+                <i class="el-input__icon el-icon-search font16"></i>
+                <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+            </div>
+            <ul class="el-autocomplete__suggestions" style="display:none;">
+                <li class=""><span>刘</span>德华</li>
+                <li class=""><span>刘</span>德华</li>
+                <li class="">赵日天</li>
+                <li class="">孙悟空</li>
+            </ul>
+        </div>
+        <a href="#" class="btn btn-take floatright marr20">批量管理</a>
+    </div>
+    <div class="order-bottom">
+        <ul class="clearfix">
+            <li><a href="#">全部宝贝<em>（50）</em></a></li>
+            <li><a href="#">居家用品<em>（3）</em></a></li>
+            <li><a href="#">小家电<em>（1）</em></a></li>
+            <li><a href="#">男装<em>（50）</em></a></li>
+            <li><a href="#">女装<em>（50）</em></a></li>
+            <li><a href="#">3c用品<em>（50）</em></a></li>
+            <li><a href="#">其他<em>（50）</em></a></li>
+            <li><a href="#">运动户外<em>（50）</em></a></li>
+            <li><a href="#">健康<em>（50）</em></a></li>
+        </ul>
+    </div>
+    <div class="stores_mark relative clearfix mart20">
+        <div class="edit_mask" style="display: block">
+            <label class="el-checkbox">
+                <span class="el-checkbox__input is-checked">
+                    <span class="el-checkbox__inner "></span>
+                    <input type="checkbox" class="el-checkbox__original" value="">
+                </span>
+            </label>
+        </div>
+        <div class="stores_l relative aligncenter floatleft">
+            <div class="stores_items clearfix">
+                <span class="color_8"><i class="iconfont icon-favor marr5"></i>4.7分</span>
+                <span class="color_8"><i class="iconfont icon-like marr5"></i>1029</span>
+            </div>
+            <div class="aligncenter stores_info aligncenter">
+                <p class="mart20 stores_logo"><img src="../img/logo.jpg"></p>
+                <p class="font14 color_3 mart20">巨氧超宝官方旗舰店</p>
+            </div>
+            <div class="stores_items stores_bt clearfix">
+                <span><a href="#">进入店铺</a></span>
+                <span><a href="#">取消收藏</a></span>
+            </div>
+        </div>
+        <div class="stores_r">
+            <div class="stores_r_t clearfix mart20">
+                <dl class="clearfix floatleft">
+                    <dd class="current"><a href="#">热销</a></dd>
+                    <dd><a href="#">新品</a></dd>
+                    <dd><a href="#">活动</a></dd>
+                </dl>
+                <div class="floatright marr10">
+                    <span class="v-middle"><em class="p_price">1</em>/4</span>
+                    <div class="el-pagination v-middle inlineblock">
+                        <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+                        <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="stores_p_list mart40">
+                <ul class="clearfix relative" style="left:-0px" title="一页是150*6">
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_1.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_3.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_1.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="stores_mark relative clearfix mart20">
+        <div class="edit_mask" style="display: block">
+            <label class="el-checkbox">
+                <span class="el-checkbox__input">
+                    <span class="el-checkbox__inner "></span>
+                    <input type="checkbox" class="el-checkbox__original" value="">
+                </span>
+            </label>
+        </div>
+        <div class="stores_l relative aligncenter floatleft">
+            <div class="stores_items clearfix">
+                <span class="color_8"><i class="iconfont icon-favor marr5"></i>4.7分</span>
+                <span class="color_8"><i class="iconfont icon-like marr5"></i>1029</span>
+            </div>
+            <div class="aligncenter stores_info aligncenter">
+                <p class="mart20 stores_logo"><img src="../img/logo.jpg"></p>
+                <p class="font14 color_3 mart20">巨氧超宝官方旗舰店</p>
+            </div>
+            <div class="stores_items stores_bt clearfix">
+                <span><a href="#">进入店铺</a></span>
+                <span><a href="#">取消收藏</a></span>
+            </div>
+        </div>
+        <div class="stores_r">
+            <div class="stores_r_t clearfix mart20">
+                <dl class="clearfix floatleft">
+                    <dd class="current"><a href="#">热销</a></dd>
+                    <dd><a href="#">新品</a></dd>
+                    <dd><a href="#">活动</a></dd>
+                </dl>
+                <div class="floatright marr10">
+                    <span class="v-middle"><em class="p_price">1</em>/4</span>
+                    <div class="el-pagination v-middle inlineblock">
+                        <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+                        <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="stores_p_list mart40">
+                <ul class="clearfix relative" style="left:-0px" title="一页是150*6">
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_1.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_4.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_3.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_1.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="../img/p_img/p_white_200_200_2.jpg"></p>
+                            <p class="p_price mart10">￥2847</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="el-pagination mart10 alignright">
+        <button class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+        <ul class="el-pager">
+            <li class="number">1</li>
+            <li class="number">2</li>
+            <li class="number">3</li>
+            <li class="number active">4</li>
+        </ul>
+        <button class="btn-next disabled"><i class="el-icon el-icon-arrow-right"></i></button>
+    </div>
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+</html>

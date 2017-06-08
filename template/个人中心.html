@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_main{height:80px;background: #75bb29;}
+        .header_main .el-input__inner{width:280px;border: 0!important;height:40px;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #75bb29;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{width:80px;color: #fff;border: 0;}
+        .per_r_top{border:1px solid #e0e0e0;padding:20px 10px;}
+        .per_r_top table th{height: 100px;border:1px solid #e0e0e0;border-width:0 1px;}
+        .per_r_top table td,.per_r_top table th{width:33%;position: relative;}
+        .user_img img{width: 100px;height:100px;border-radius:50%;}
+        .lv{display: inline-block;background: #f1be0f;height: 22px;line-height: 22px;padding: 0 10px;color: #fff;text-shadow:0 0 4px rgba(0, 0, 0, .15);border-radius:3px;}
+        .per_r_top table th span{display:inline-block;font-size: 14px;width: 50%;float: left;line-height: 40px;text-indent:30px;}
+        .per_r_top table td.last_td span{display:block;line-height: 40px;padding-left: 20px;}
+        .per_r_top table td.last_td .btn{width: 48px;height: 22px;line-height: 22px;border:1px solid #e0e0e0;color: #888888;border-radius:3px;text-align: center;margin-right: 5px;}
+        .per_r_top table td.last_td p{width:100%;position: absolute;top:15px;}
+        .progress,.progress_in{width: 100px;height: 6px;background: #e0e0e0;border-radius:4px;position: relative;}
+        .progress_in{background: #75bb29;position: absolute;top:0;left: 0;}
+        .progress span.color_8{position: absolute;top:8px;left:30%;}
+        .inner_main{border:1px solid #e0e0e0;}
+        .inner_left{width: 640px;}
+        .logistics li{padding:15px 0;border-bottom: 1px dotted #e0e0e0;position: relative;}
+        .logistics span.floatleft img{width:70px;height:70px;vertical-align: bottom;}
+        .logistics li .btn-take{position: absolute;top:20px;right: 20px;}
+        .logistics li a.p_price{color: #333;}
+        .logistics li a.p_price:hover{color: #75bb29;}
+        .logistics_box{width:398px;border: 1px solid #75bb29;position: absolute;z-index:2;top:100px;left:100px;background: #fff;color: #888;}
+        .logistics_box .title{color: #888;padding:0 10px;border-bottom: 1px solid #e0e0e0;background: #fafafa;line-height: 30px;}
+        .logistics_main{padding: 10px 0;}
+        .logistics_box p{line-height: 20px;}
+        .logistics_main ol li{padding:5px 0;border: 0;word-break: break-all;word-wrap: break-word;}
+        .logistics_main ol li{list-style-type:disc;}
+        .inner_right{width:310px;}
+        .service{border: 0;}
+        .s_nav td{border: 1px solid #e0e0e0;}
+        .s_nav a{display: inline-block;width: 76px;height:63px;padding-top:15px;text-align:center;color:#888;line-height:25px;background: #fff;}
+        .s_nav a:hover{color:#75bb29;}
+        .s_nav td p{transition: 0.3s;}
+        .s_nav td:hover p:first-child{transform: translateY(-4px);}
+        .s_nav td.current{border-color:#75bb29!important;border-bottom-color: #fff;}
+        .s_nav td.current a{color:#75bb29;position: relative;bottom:-1px;z-index: 2;}
+        .s_nav td.td_hide{border-right:0;}
+        .s_main{min-height: 140px;padding-bottom:10px;border: 1px solid #75bb29;margin-top: -1px;position: relative;z-index: 1;}
+        .s_main .a-close{position: absolute;top:10px;right: 10px;}
+        .mini_nav a{display:inline-block;color: #b0b0b0;border-bottom:2px solid #fff;line-height:26px;margin:0 10px;}
+        .mini_nav a.current{color: #75bb29;border-bottom:2px solid #75bb29;}
+        .select_box span{display: inline-block;width:50px;line-height:26px;margin-right: 10px;color:#333;}
+        .s_select{width:170px;height:26px;border:1px solid #e0e0e0;border-radius:0;}
+        .s_main .el-textarea__inner{border-radius: 0;resize: none;border-color: #e0e0e0;font-size:12px;}
+        .el-form-item__label{text-indent:10px;color: #333;height:25px;line-height:25px;padding: 0;}
+        .el-form-item{width:200px;border: 1px solid #e0e0e0;border-radius: 4px;height:25px;line-height:25px;margin:10px 0 0 50px;}
+        .el-input__inner{border: 0!important;padding: 0;height:25px;line-height:25px;border-radius: 4px;}
+        .history_list_mini li{width: 80px;float: left;margin:10px 0 10px 17px;}
+        .history_list_mini li img{width: 80px;height: 80px;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <a href="#" class="btn btn_cart floatright"><i class="iconfont icon-cartfill marr5"></i>购物车(<em>10</em>)</a>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">欢迎回来，<em>刘德华</em></a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的余额<i class="el-icon-caret-bottom marl5"></i></a></li>
+                <li class="noborder"><a href="#">消息公告</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo2.jpg"></a>
+            <span class="floatleft lthei color_white font24 marl5">个人中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:280px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">我的购物车</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">我的订单</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">收藏夹</dt>
+            <dd><a href="#">收藏的商品</a></dd>
+            <dd><a href="#">收藏的店铺</a></dd>
+            <dd><a href="#">浏览历史</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt class="color_3">资产中心</dt>
+            <dd><a href="#">账户余额</a></dd>
+            <dd><a href="#">返利余额</a></dd>
+            <dd><a href="#">充值</a></dd>
+            <dd><a href="#">转出</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">我的维权</a></dt>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="per_r_top lthei">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <div class="clearfix">
+                            <span class="user_img floatleft marr20"><img src="../img/p_img/p_500_500_1.jpg"></span>
+                            <p class="font16 color_3 p_top10">不爱吃鱼的猫</p>
+                            <p class="mart10"><span class="lv">LV.3</span></p>
+                            <div class="progress inlineblock mart10">
+                                <div class="progress_in" style="width: 60%;"></div>
+                                <span class="color_8"><em class="p_price">200</em>/500</span>
+                            </div>
+                        </div>
+                    </td>
+                    <th>
+                        <span>待付款<a href="#" class="p_price">（0）</a></span>
+                        <span>待发货<a href="#" class="p_price">（123）</a></span>
+                        <span>待收货<a href="#" class="p_price">（23）</a></span>
+                        <span>待评价<a href="#" class="p_price">（0）</a></span>
+                    </th>
+                    <td class="last_td">
+                        <p class="alignright">
+                            <a href="#" class="btn">充值</a>
+                            <a href="#" class="btn">转出</a>
+                        </p>
+                        <span class="font14">账户余额：<a href="#" class="p_price">23,423.00</a></span>
+                        <span class="font14">返利余额：<a href="#" class="p_price">366.00</a></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="mart30 clearfix">
+            <!--我的物流begin-->
+            <div class="inner_left lthei floatleft">
+                <p class="p_price font14">我的物流</p>
+                <div class="inner_main mart10">
+                    <ul class="logistics marl20">
+                        <li class="clearfix">
+                            <span class="floatleft marr20"><img src="../img/p_img/p_80_80_1.jpg"></span>
+                            <p class="color_3 txt_hidden">快件已签收,感谢您使用中通快递!</p>
+                            <p class="mart10">2016-12-06 14:44:40</p>
+                            <p class="mart15"><a href="#" class="p_price">查看物流明细</a></p>
+                            <a href="#" class="btn btn-take">确认收货</a>
+                            <!--物流信息begin-->
+                            <div class="logistics_box">
+                                <p class="title alignright clearfix">
+                                    <span class="floatleft">中通快递</span>
+                                    <span>运单号：420862316509</span>
+                                </p>
+                                <div class="logistics_main">
+                                    <ol class="marl25 marr10">
+                                        <li>
+                                            <p class="p_price">快件已签收,感谢您使用中通快递!</p>
+                                            <p>2016-12-06 14:44:40</p>
+                                        </li>
+                                        <li>
+                                            <p>北京甘家口中通 的 岳全保13370118683 正在派件,请保持电话畅通哦!</p>
+                                            <p>2016-12-06 14:44:40</p>
+                                        </li>
+                                        <li>
+                                            <p>北京甘家口中通 的 岳全保13370118683 正在派件,请保持电话畅通哦!</p>
+                                            <p>2016-12-06 14:44:40</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!--物流信息over-->
+                        </li>
+                        <li class="clearfix">
+                            <span class="floatleft marr20"><img src="../img/p_img/p_80_80_1.jpg"></span>
+                            <p class="color_3 txt_hidden">[北京市]北京甘家口中通派件员：岳全保13370118683正在为您派件</p>
+                            <p class="mart10">2016-12-06 14:44:40</p>
+                            <p class="mart15"><a href="#" class="p_price">查看物流明细</a></p>
+                        </li>
+                        <li class="clearfix">
+                            <span class="floatleft marr20"><img src="../img/p_img/p_80_80_1.jpg"></span>
+                            <p class="color_3 txt_hidden">[北京市]北京甘家口中通派件员：岳全保13370118683正在为您派件</p>
+                            <p class="mart10">2016-12-06 14:44:40</p>
+                            <p class="mart15"><a href="#" class="p_price">查看物流明细</a></p>
+                        </li>
+                        <li class="clearfix">
+                            <span class="floatleft marr20"><img src="../img/p_img/p_80_80_1.jpg"></span>
+                            <p class="color_3 txt_hidden">[北京市]北京甘家口中通派件员：岳全保13370118683正在为您派件</p>
+                            <p class="mart10">2016-12-06 14:44:40</p>
+                            <p class="mart15"><a href="#" class="p_price">查看物流明细</a></p>
+                        </li>
+                        <li class="clearfix">
+                            <span class="floatleft marr20"><img src="../img/p_img/p_80_80_1.jpg"></span>
+                            <p class="color_3 txt_hidden">[北京市]北京甘家口中通派件员：岳全保13370118683正在为您派件</p>
+                            <p class="mart10">2016-12-06 14:44:40</p>
+                            <p class="mart15"><a href="#" class="p_price">查看物流明细</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--我的物流over-->
+            <div class="inner_right floatright">
+                <div class="service_box">
+                    <p class="p_price font14">便民服务</p>
+                    <div class="inner_main service mart10">
+                        <table class="s_nav" width="100%">
+                            <tr>
+                                <td class="current" name="1">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-shouji font30"></i></p>
+                                        <p>话费充值</p>
+                                    </a>
+                                </td>
+                                <td class="" name="2">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-jipiao font30"></i></p>
+                                        <p>机票</p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" name="3">
+                                        <p><i class="iconfont icon-tielu font30"></i></p>
+                                        <p>火车票</p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" name="4">
+                                        <p><i class="iconfont icon-hotfill font30"></i></p>
+                                        <p>水电煤</p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="s_main s_main_1">
+                            <a href="javascript:;" class="a-close"><i class="iconfont icon-close"></i></a>
+                            <div class="s_main_inner" title="手机充值" style="display: ;">
+                                <div class="el-form-item mart20">
+                                    <div class="el-form-item__label alignleft" style="width:50px;">号码</div>
+                                    <div class="el-form-item__content" style="margin-left: 50px;">
+                                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="手机号码"></div>
+                                    </div>
+                                </div>
+                                <div class="el-form-item">
+                                    <div class="el-form-item__label alignleft" style="width: 50px;">面值</div>
+                                    <div class="el-form-item__content" style="margin-left: 50px;">
+                                        <div class="el-input"><input type="text" autocomplete="off" class="el-input__inner" placeholder="100元"></div>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即充值</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="机票" style="display:none;">
+                                <p class="mini_nav mart5 aligncenter">
+                                    <a href="#" class="current">国内机票</a>
+                                    <a href="#" class="">国际机票</a>
+                                </p>
+                                <div class="marl40">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>出发城市</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>到达城市</span>
+                                        <select class="s_select">
+                                            <option>－请选择－</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>出发日期</span>
+                                        <select class="s_select width-54">
+                                            <option>2016</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>12</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即查找</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="火车" style="display:none;">
+                                <div class="marl40">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>出发城市</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>到达城市</span>
+                                        <select class="s_select">
+                                            <option>－请选择－</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>出发日期</span>
+                                        <select class="s_select width-54">
+                                            <option>2016</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>12</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即查找</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="水电煤" style="display:none;">
+                                <div class="marl40 mart20">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>缴费城市</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>上海</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>缴费类型</span>
+                                        <select class="s_select">
+                                            <option>水费</option>
+                                            <option>电费</option>
+                                            <option>燃气费</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即缴费</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <table class="s_nav" width="100%">
+                            <tr>
+                                <td name="5">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-wodebaozhang font30"></i></p>
+                                        <p>保险</p>
+                                    </a>
+                                </td>
+                                <td name="6">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-hanbao font30"></i></p>
+                                        <p>外卖</p>
+                                    </a>
+                                </td>
+                                <td name="7">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-chengshifuwu font30"></i></p>
+                                        <p>酒店</p>
+                                    </a>
+                                </td>
+                                <td name="8">
+                                    <a href="#">
+                                        <p><i class="iconfont icon-kuaidi font30"></i></p>
+                                        <p>快递</p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="s_main s_main_2" style="display:none;">
+                            <a href="javascript:;" class="a-close"><i class="iconfont icon-close"></i></a>
+                            <div class="s_main_inner" title="保险" style="display: none;">
+                                <p class="mini_nav mart5 aligncenter">
+                                    <a href="#" class="current">车险</a>
+                                    <a href="#" class="">意外险</a>
+                                    <a href="#" class="">医疗险</a>
+                                </p>
+                                <div class="marl40 mart20">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>投保城市</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>保险公司</span>
+                                        <select class="s_select">
+                                            <option>－请选择－</option>
+                                            <option>中国人寿</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即充值</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="外卖" style="display:none;">
+                                <div class="marl40 mart20">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>关键字</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>菜品类型</span>
+                                        <select class="s_select">
+                                            <option>－请选择－</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即查找</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="酒店" style="display:none;">
+                                <div class="marl40 mart20">
+                                    <div class="select_box mart10 clearfix">
+                                        <span>城市</span>
+                                        <select class="s_select">
+                                            <option>B北京</option>
+                                            <option>B北京</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>入住时间</span>
+                                        <select class="s_select width-54">
+                                            <option>2016</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>12</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>30</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mart10 clearfix">
+                                        <span>离店时间</span>
+                                        <select class="s_select width-54">
+                                            <option>2016</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>12</option>
+                                        </select>
+                                        <select class="s_select width-54">
+                                            <option>30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="aligncenter mart15">
+                                    <a href="#" class="el-button--buy el-button--small inlineblock"><span>查找酒店</span></a>
+                                </p>
+                            </div>
+                            <div class="s_main_inner" title="快递" style="display:none;">
+                                <p class="mini_nav mart5 aligncenter">
+                                    <a href="#" class="current">寄件</a>
+                                    <a href="#" class="">查快递</a>
+                                </p>
+                                <div class="marl40">
+                                    <p class="mart20 color_3">寄件人地址</p>
+                                    <div class="el-textarea marr20 mart10"><textarea placeholder="请输入内容" rows="2" class="el-textarea__inner" style="height: 54px;"></textarea></div>
+                                    <p class="aligncenter mart15">
+                                        <a href="#" class="el-button--buy el-button--small inlineblock"><span>立即预约</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mart25">
+                    <p class="p_price font14">浏览历史</p>
+                    <div class="inner_main mart10">
+                        <ul class="history_list_mini clearfix">
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_1.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_2.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_3.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_4.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_1.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p><img src="../img/p_img/p_80_80_2.jpg"></p>
+                                    <p class="aligncenter mart10">￥2400</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+</body>
+<script src="../js/jquery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var $s_nav_td = $('.s_nav').find('td');
+        $s_nav_td.hover(function () {
+            var $this = $(this),
+                t_index = $this.index(),
+                t_name = $this.attr('name'),
+                inner_index = $('.s_main_inner').attr('name');
+            $this.removeClass('td_hide').addClass('current').prev().addClass('td_hide');
+            $this.siblings().removeClass('current');
+            $('.s_main_inner').hide();
+            if(t_name>4){
+                $('.s_main_1').hide();
+                $('.s_main_1').prev('.s_nav').find('td').removeClass();
+                $('.s_main_2').show();
+                $('.s_main_2').show().find('.s_main_inner').eq(t_index).show().siblings().hide();
+            }else{
+                $('.s_main_2').hide();
+                $('.s_main_2').prev('.s_nav').find('td').removeClass();
+                $('.s_main_1').show().find('.s_main_inner').eq(t_index).show().siblings().hide();
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退货退款设置</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">退货退款设置</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form">
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;">退货退款服务状态：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <label class="el-radio radio">
+                                <span class="el-radio__input is-checked">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">开启</span>
+                            </label>
+                            <label class="el-radio radio">
+                                <span class="el-radio__input">
+                                    <span class="el-radio__inner"></span>
+                                    <input type="radio" class="el-radio__original" value="1">
+                                </span>
+                                <span class="el-radio__label">关闭</span>
+                            </label>
+                            <span class="color_cross">（提示：开启后您的用户可以在会员中心提交退货申请）</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width: 140px;">退货时间限制：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <span>订单收货超过</span>
+                            <div class="el-input width-80"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                            <span>天后，不能进行退货申请(默认7天)</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;">退货说明：</label>
+                        <div class="el-form-item__content" style="margin-left:140px;">
+                            <p class="color_cross">（设置后，将会在用户申请退货页面中展示）</p>
+                            <div class="el-textarea" style="width: 50%;"><textarea placeholder="" rows="10" class="el-textarea__inner"></textarea></div>
+                            <p class="color_cross" style="margin-top: -20px;">您还可以输入<em class="color_link">500</em>字</p>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:140px;"></label>
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-80"><span>保存设置</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

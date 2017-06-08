@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单设置</title>
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body>
+<div class="admin_layout">
+    <div class="admin_header clearfix">
+        <a href="#" class="logo floatleft"><img src="../img/logo.jpg"></a>
+        <div class="ad_header_span floatright">
+            <div class="el-dropdown">
+                <span class="el-dropdown-link">
+                    <span>aRizeN</span>
+                    <i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="ad_header_span floatright">
+            <div class="el-badge item">
+                <i class="el-icon-message font20"></i>
+                <sup class="el-badge__content is-fixed">12</sup>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <ul class="el-menu">
+                <li class="el-menu-item is-active"><i class="el-submenu__icon-arrow el-icon-circle"></i>首页</li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>用户管理</li>
+                <li class="el-submenu is-active is-opened">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商铺管理</div>
+                    <ul class="el-menu collapse-transition">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>订单管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>商品管理</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-menu-item"><i class="el-submenu__icon-arrow  el-icon-circle"></i>统计</li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>投诉</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">已处理投诉</li>
+                                <li class="el-menu-item">未处理投诉</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="el-submenu">
+                    <div class="el-submenu__title"><i class="el-submenu__icon-arrow el-icon-arrow-down"></i>设置</div>
+                    <ul class="el-menu collapse-transition" style="display: none;">
+                        <li class="el-menu-item-group">
+                            <ul>
+                                <li class="el-menu-item">选项1</li>
+                                <li class="el-menu-item">选项2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+            <p class="font16">订单设置</p>
+            <div class="admin_box mart20 clearfix">
+                <form class="el-form">
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:120px;">订单失效时间：</label>
+                        <div class="el-form-item__content" style="margin-left:120px;">
+                            <span>下单后</span>
+                            <div class="el-input width-80"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                            <span> 小时内不付款将废弃订单，如果失效时间填写为空，默认为72小时</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width: 120px;">订单确认收货时间：</label>
+                        <div class="el-form-item__content" style="margin-left: 120px;">
+                            <span>订单发货后</span>
+                            <div class="el-input width-80"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                            <span>天内不确认收货了，订单状态自动变更为已完成，如果收货时间填写为空，默认为10天</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:120px;">下单限制：</label>
+                        <div class="el-form-item__content" style="margin-left:120px;">
+                            <span>分钟内最多允许下</span>
+                            <div class="el-input width-80"><input type="text" placeholder="" autocomplete="off" class="el-input__inner"></div>
+                            <span>笔订单，默认为10笔，限制输入1-20之间的整数</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:120px;">下单时间：</label>
+                        <div class="el-form-item__content" style="margin-left:120px;">
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-80">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span class="">：</span>
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-80" type="fixed-time">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span class="">-</span>
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-80">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span class="">：</span>
+                            <div class="el-date-editor el-input el-date-editor--date inlineblock width-80" type="fixed-time">
+                                <i class="el-input__icon el-icon-date"></i>
+                                <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                            </div>
+                            <span>之间的时间段允许用户下单</span>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label" style="width:120px;"></label>
+                        <div class="el-form-item__content">
+                            <button type="button" class="el-button el-button--primary el-button--small width-80"><span>保存设置</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

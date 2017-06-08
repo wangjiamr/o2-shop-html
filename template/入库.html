@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>入库</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css_copy/index.css">
+    <link rel="stylesheet" href="../css_copy/iconfont.css">
+    <link rel="stylesheet" href="../css_copy/global.css">
+    <link rel="stylesheet" href="../css_copy/styles.css">
+    <style type="text/css">
+        body{background: #fafafa;}
+        .header{height: 120px;overflow: hidden;box-shadow: none;}
+        .header_top{height:39px;background: #f0f0f0;border-bottom: 1px solid #e0e0e0;}
+        .header_nav li{border: 0;}
+        .header_nav li a{color: #999;}
+        .header_main{background: #0085d7;}
+        .header_main .el-input__inner{width:260px;border: 0!important;height:40px;}
+        .header_top .header_nav a em{color: #333;}
+        .el-autocomplete .el-input__icon{background: #fff;color: #0085d7;}
+        .header_main .color_white{line-height:80px;font-weight: bold;}
+        .header_main .header_nav li{height:auto;}
+        .header_main .header_nav li a{color: #fff;border: 0;}
+        .p_price{line-height: 30px;}
+        .p_price a.btn-theme{width:100px;height:30px;line-height:30px;}
+        .p_price a.btn-theme input{position: absolute;width: 100px;height: 30px;left: 0;top:0;text-indent: -999px;font-size: 0;outline: 0;}
+        .el-form-item__content{line-height: 24px;}
+        .personal_left dl a.current,.p_price,.color_theme{color: #0085d7!important;}
+        .btn-theme{background: #0085d7!important;}
+        .btn-take{height: 22px;line-height: 22px;background: none;}
+        .col-1{width:150px;}
+        .col-2{width:200px;}
+        .col-3{width:150px;}
+        .col-4{width:150px;}
+        .col-5{width:90px;}
+        .tb_add_class{border: 1px solid #e0e0e0;}
+        .tb_add_class thead th{color:#333;height:40px;background: #fafafa;padding-left: 20px;}
+        .tb_add_class thead tr{border: 1px solid #e0e0e0;}
+        .tb_add_class tbody td{padding:10px 0 10px 20px;border-bottom: 1px solid #e0e0e0;}
+        .tb_add_class input{width:178px;height: 24px;border: 1px solid #e0e0e0;outline: 0;text-indent: 5px;vertical-align: middle;}
+        .tb_add_class input:focus,.el-checkbox__inner:hover{border-color: #0085d7!important;}
+        .tb_add_class tbody td i.iconfont{font-size:20px;font-weight:bold;margin: 0 3px;cursor: pointer;}
+        .tb_add_class tbody td .btn-theme{width:100px;height: 26px;line-height:26px;}
+        .class_nav a{color: #333;margin-right: 10px;line-height: 30px;}
+        .class_nav a.current,.class_nav a:hover,.tb_add_class tbody td a:hover{color: #0085d7;}
+        .el-checkbox__inner.is-checked{background:#0085d7;border-color:#0085d7;}
+        .item_bg{background: #fafafa;padding:15px;}
+        .item_bg .el-input{width: 160px;}
+        .item_bg .el-form-item__label{font-size: 12px;color: #888;text-align: right;padding-top: 6px;}
+        .item_bg .el-input .el-input__inner,.item_bg .el-date-editor__editor{border-radius: 0;border-color:#e0e0e0;height: 28px;line-height: 28px;font-size: 12px;}
+        .item_bg.r_ku .el-form-item{width:25%;height: 24px;}
+        .item_bg.r_ku .el-form_inner{height:28px;}
+        .btn-theme{width:auto;min-width:50px;height:28px;line-height:28px;padding:0 10px;}
+        .item_bg .el-form-item__label{font-size: 12px;color: #333;text-align: left;}
+        .item_bg.r_ku .el-date-editor{width:160px;height: 24px;}
+        .item_bg .el-date-editor__trigger.el-icon{line-height: 29px;right: 5px;}
+        .inner_top span{display:inline-block;line-height:26px;}
+        .inner_top .s_select{width:100px;height:26px;border:1px solid #e0e0e0;border-radius:0;}
+        .inner_top + .info_box{padding:9px;}
+        .rk_table{width: 100%;}
+        .rk_table .col-1{width:40px;}
+        .rk_table .col-2{width: 280px;}
+        .rk_table .col-3{width: 140px;}
+        .rk_table .col-4{width: 250px;}
+        .rk_table .col-5{width: 50px;}
+        .rk_table thead th,.rk_table tbody td{padding:0 10px;}
+        .rk_table thead th{height:38px;}
+        .rk_table tbody td{height:50px;background:#fafafa;color: #333;}
+        .rk_table tbody input{width:90px;height: 26px;border:1px solid #e0e0e0;outline: 0;text-indent:5px;}
+        .el-textarea__inner,.el-textarea__inner:focus{border-radius: 0;resize: none;border-color: #e0e0e0;font-size:12px;}
+        .rk_table td a{color:#ccc;}
+        .rk_table td a:hover{color:#0085d7;}
+        .el-button{padding:5px 10px;font-size: 12px;}
+        .el-button.el-button--theme{border-color:#0085d7;color: #fff;background:#0085d7;}
+    </style>
+</head>
+<body>
+<!--header begin-->
+<div class="header">
+    <div class="header_top">
+        <div class="content clearfix">
+            <ul class="header_nav lthei mart15 floatleft clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">平台政策</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li class="noborder"><a href="#">巨氧超宝手机版</a></li>
+            </ul>
+            <ul class="header_nav lthei mart15 floatright clearfix">
+                <li><a href="#">Hi，<em>刘德华</em></a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_main">
+        <div class="content clearfix">
+            <a href="#" class="header_logo floatleft"><img src="../img/logo_w.png"></a>
+            <span class="floatleft lthei color_white font24 marl5">卖家中心</span>
+            <ul class="header_nav lthei mart30 floatleft font14 clearfix">
+                <li><a href="#">首页</a></li>
+                <li class="current"><a href="#">账户设置</a></li>
+                <li><a href="#">消息（10）</a></li>
+            </ul>
+            <div class="el-autocomplete my-autocomplete floatright mart20" style="width:260px;">
+                <div class="el-input">
+                    <i class="el-input__icon el-icon-search font24"></i>
+                    <input type="text" placeholder="" autocomplete="off" class="el-input__inner">
+                </div>
+                <ul class="el-autocomplete__suggestions" style="display: none;">
+                    <li class=""><span>刘</span>德华</li>
+                    <li class=""><span>刘</span>德华</li>
+                    <li class="">赵日天</li>
+                    <li class="">孙悟空</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header over-->
+<div class="content clearfix">
+    <!--left begin-->
+    <div class="personal_left lthei floatleft">
+        <dl class="mart20">
+            <dt><a href="#">店铺收益</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">交易管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">评价管理</a></dt>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">商品管理</a></dt>
+            <dd><a href="#">我的商品</a></dd>
+            <dd><a href="#" class="current">入库</a></dd>
+            <dd><a href="#">出库</a></dd>
+            <dd><a href="#">盘点</a></dd>
+        </dl>
+        <dl class="mart20">
+            <dt><a href="#">店铺管理</a></dt>
+            <dd><a href="#">基本设置</a></dd>
+            <dd><a href="#">店内分类</a></dd>
+            <dd><a href="#">查看店铺</a></dd>
+        </dl>
+    </div>
+    <!--left over-->
+    <!--right begin-->
+    <div class="personal_right">
+        <div class="item_bg r_ku">
+            <form class="el-form">
+                <div class="el-form_inner clearfix">
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label " style="width: 60px;">入库类型</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <div class="el-select">
+                                <div class="el-input">
+                                    <i class="el-input__icon el-icon-caret-top"></i>
+                                    <input type="text" placeholder="" readonly="readonly" autocomplete="off" class="el-input__inner">
+                                </div>
+                                <div class="resize-triggers">
+                                    <div class="expand-trigger">
+                                        <div style="width: 151px; height: 37px;"></div>
+                                    </div>
+                                    <div class="contract-trigger"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label" style="width: 60px;">开始时间</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <span class="el-date-editor is-have-trigger">
+                                <input type="text" placeholder="" class="el-date-editor__editor">
+                                <span class="el-date-editor__trigger el-icon el-icon-date"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__label" style="width: 60px;">结束时间</div>
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <span class="el-date-editor is-have-trigger">
+                                <input type="text" placeholder="" class="el-date-editor__editor">
+                                <span class="el-date-editor__trigger el-icon el-icon-date"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="el-form-item floatleft">
+                        <div class="el-form-item__content" style="margin-left: 60px;">
+                            <a href="#" class="btn btn-theme font12">搜索</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="mart20 clearfix">
+            <p class="alignright"><a href="#" class="btn btn-theme font12">制作入库单</a></p>
+            <table class="tb_add_class mart10" width="100%">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>入库类型</th>
+                    <th>单号</th>
+                    <th>制单人</th>
+                    <th>日期</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>采购入库</td>
+                    <td>IN20161226103843206</td>
+                    <td>王大锤</td>
+                    <td>2016-12-17  14:53</td>
+                    <td>
+                        <a href="#" class="a_link">明细</a>
+                        <a href="#" class="a_link marl10">导出</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>采购入库</td>
+                    <td>IN20161226103843206</td>
+                    <td>王大锤</td>
+                    <td>2016-12-17  14:53</td>
+                    <td>
+                        <a href="#" class="a_link">明细</a>
+                        <a href="#" class="a_link marl10">导出</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>采购入库</td>
+                    <td>IN20161226103843206</td>
+                    <td>王大锤</td>
+                    <td>2016-12-17  14:53</td>
+                    <td>
+                        <a href="#" class="a_link">明细</a>
+                        <a href="#" class="a_link marl10">导出</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>采购入库</td>
+                    <td>IN20161226103843206</td>
+                    <td>王大锤</td>
+                    <td>2016-12-17  14:53</td>
+                    <td>
+                        <a href="#" class="a_link">明细</a>
+                        <a href="#" class="a_link marl10">导出</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--right over-->
+</div>
+<!--footer begin-->
+<div class="footer relative">
+    <div class="content footer_main lthei">
+        <table>
+            <tr>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>联系我们</p>
+                    <p><img src="../img/phone.png"><span>( 86 ) 0769-81661177 ( 服务时间 9:30-17:30 )</span></p>
+                    <p><img src="../img/mail.png"><span>chaobaohl@163.com</span></p>
+                    <p><img src="../img/qq.png"><span>1群: 191994219 ( 开 )</span></p>
+                    <div class="div_txt marl30 mart10">近来有不明网友在交流群里散步假冒的官方群号请各位用户擦亮眼睛，注意甄别！</div>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>安全保障</p>
+                    <p>采用Google Authenticator双重认证实时动态口令保护客户资金安全</p>
+                    <p>优氧币钱包多层加密，离线存储，保障资产安全</p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line"></i>友情链接</p>
+                    <p>百度：<a href="#">http://www.baidu.com</a></p>
+                    <p>搜狐：<a href="#">http://www.sohu.com</a></p>
+                    <p>花瓣网：<a href="#">http://www.huaban.com</a></p>
+                </td>
+                <td>
+                    <p class="t_title"><i class="l_line nobg"><img src="../img/l_1.png"></i>风险警告</p>
+                    <p>优氧币交易有风险，它是全天24小时交易，没有涨跌限制。价格容易受到庄家、全球政策等影响下大幅波动。</p>
+                    <p>我们强烈建议您在自身承受的风险范围内，参与优氧币交易。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="aligncenter">Copyright巨氧超宝（深圳）实业控股有限公司 © 2016</p>
+</div>
+<!--footer over-->
+<div class="mask" style="display: block"></div>
+<div class="pop" style="width:900px;height: 400px;margin:-200px 0 0 -450px;">
+    <p class="pop_title alignright clearfix">
+        <span class="floatleft">制作出库单</span>
+        <a href="javascript:;" class="a-close marr10"><i class="iconfont icon-close"></i></a>
+    </p>
+    <div class="pop_inner">
+        <div class="inner_top clearfix">
+            <div class="floatleft">
+                <span>入库类型：</span>
+                <select class="s_select"><option>采购入库</option></select>
+            </div>
+            <div class="floatleft marl40">
+                <span>单号：</span>
+                <span>IN20161228103864011</span>
+            </div>
+            <div class="floatleft marl40">
+                <span>日期：</span>
+                <span>2016-12-28 20:43</span>
+            </div>
+            <div class="floatleft marl40">
+                <span>制单人：</span>
+                <span>王大锤</span>
+            </div>
+        </div>
+        <div class="info_box mart20">
+            <table class="rk_table">
+                <colgroup>
+                    <col class="col-1">
+                    <col class="col-2">
+                    <col class="col-3">
+                    <col class="col-4">
+                    <col class="col-5">
+                </colgroup>
+                <thead>
+                    <th></th>
+                    <th>商品名称</th>
+                    <th>入库量</th>
+                    <th>备注</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><span>耐克AIR JORDAN 4 乔AJ4白水泥840606 92 308496-104 308496-104 45</span></td>
+                        <td><input type="text"placeholder="192"></td>
+                        <td>
+                            <div class="el-textarea"><textarea placeholder="" rows="2" class="el-textarea__inner" style="height: 40px;"></textarea></div>
+                        </td>
+                        <td>
+                            <a href="javascript:;" class="marl20"><i class="el-icon-circle-close"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mart20"><a href="#" class="el-button el-button--admin">选择商品</a></p>
+        </div>
+        <div class="mart20">
+            <span class="color_3 v-top">备注：</span>
+            <div class="el-textarea inlineblock"><textarea placeholder="" rows="2" class="el-textarea__inner" style="width:400px;height:50px;"></textarea></div>
+        </div>
+        <p class="aligncenter mart20">
+            <a href="#" class="el-button el-button--theme">保存</a>
+            <a href="#" class="el-button el-button--admin">取消</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
