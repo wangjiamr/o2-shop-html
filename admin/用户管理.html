@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../css_copy/index.css">
     <link rel="stylesheet" href="../css_copy/iconfont.css">
     <link rel="stylesheet" href="../css/admin_style.css">
+    <style type="text/css">
+
+    </style>
 </head>
 <body>
 <div class="admin_layout">
@@ -133,12 +136,156 @@
                             </div>
                         </div>
                     </div>
+                    <div class="el-input el-input-group el-input-group--append el-input-group--prepend mart5 marl10" style="width: 280px;">
+                        <div class="el-input-group__prepend">
+                            <div class="el-select">
+                                <div class="el-input">
+                                    <i class="el-input__icon el-icon-caret-top"></i>
+                                    <input type="text" placeholder="请选择" readonly="readonly" autocomplete="off" class="el-input__inner">
+                                </div>
+                                <div class="el-select-dropdown" style="display: none; min-width: 100px;">
+                                    <div class="el-scrollbar">
+                                        <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                            <ul class="el-scrollbar__view el-select-dropdown__list" style="position: relative;">
+                                                <li class="el-select-dropdown__item"><span>邮箱</span></li>
+                                                <li class="el-select-dropdown__item"><span>用户名称</span></li>
+                                                <li class="el-select-dropdown__item"><span>手机</span></li>
+                                                <div class="resize-triggers">
+                                                    <div class="expand-trigger">
+                                                        <div style="width: 1px; height: 1px;"></div>
+                                                    </div>
+                                                    <div class="contract-trigger"></div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                        <div class="el-scrollbar__bar is-horizontal">
+                                            <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                        </div>
+                                        <div class="el-scrollbar__bar is-vertical">
+                                            <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resize-triggers">
+                                    <div class="expand-trigger">
+                                        <div style="width: 101px; height: 29px;"></div>
+                                    </div>
+                                    <div class="contract-trigger"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="请输入内容" autocomplete="off" class="el-input__inner"><!---->
+                        <div class="el-input-group__append">
+                            <button type="button" class="el-button el-button--default">
+                                <i class="el-icon-search"></i>
+                            </button>
+                        </div>
+                    </div>
                     <div class="el-form-item nomar floatright">
                         <div class="el-form-item__content">
                             <button type="button" class="el-button el-button--primary el-button--small width-60"><span>搜索</span></button>
                         </div>
                     </div>
                 </form>
+            </div>
+            <div class="el-form el-form_check mart20">
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width:100px;">币种：</label>
+                    <div class="el-form-item__content" style="margin-left: 100px;">
+                        <div class="coin-select visible inlineblock">
+                            <div class="el-radio-button__inner  width-200 alignleft">
+                                <i class="el-icon-caret-bottom font12"></i>
+                                <p>
+                                    <span><img src="../img/coin-1.png"></span>
+                                    <span class="font14 marl5">比特币<em class="color_8 marl5">BTC</em></span>
+                                </p>
+                            </div>
+                            <div class="coin_box">
+                                <em class="arrow_bt"></em>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-1.png">
+                                                    <em>比特币BTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-2.png">
+                                                    <em>莱特币 LTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-3.png">
+                                                    <em>比特币BTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-4.png">
+                                                    <em>莱特币 LTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-5.png">
+                                                    <em>比特币BTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-6.png">
+                                                    <em>莱特币 LTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-5.png">
+                                                    <em>比特币BTC</em>
+                                                </span>
+                                <span class="coin_one">
+                                                    <img src="../img/coin-6.png">
+                                                    <em>莱特币 LTC</em>
+                                                </span>
+                            </div>
+                        </div>
+                        <label class="marl20">选择时间：</label>
+                        <div class="el-date-editor el-input el-date-editor--datetimerange width-200">
+                            <i class="el-input__icon el-icon-time"></i>
+                            <input type="text" placeholder="选择时间范围" autocomplete="off" class="el-input__inner">
+                        </div>
+                        <div class="search_box inlineblock relative marl20 clearfix" style="width: 300px;">
+                            <div class="dropdown_menu dropdown_active" style="width: 80px;" title="">
+                                <p>用户名称</p>
+                                <em class="arrow"></em>
+                                <ul class="dropdown_ul ">
+                                    <li class="current"><a href="#">用户</a></li>
+                                    <li><a href="#">用户</a></li>
+                                    <li><a href="#">用户</a></li>
+                                    <li><a href="#">用户</a></li>
+                                </ul>
+                            </div>
+                            <input class="input" type="text" style="width: 170px;" title="width=300-80-10">
+                            <i class="el-icon-search color_8 font14"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width: 100px;">交易类型：</label>
+                    <div class="el-form-item__content" style="margin-left: 100px;">
+                        <a class="el-button el-button--small el-button--primary"><span>买入</span></a>
+                        <a class="el-button el-button--small el-button--text"><span>卖出</span></a>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width: 100px;">委托状态：</label>
+                    <div class="el-form-item__content" style="margin-left: 100px;">
+                        <a class="el-button el-button--small el-button--primary"><span>未成交</span></a>
+                        <a class="el-button el-button--small el-button--text"><span>部分成交</span></a>
+                        <a class="el-button el-button--small el-button--text"><span>已成交</span></a>
+                        <a class="el-button el-button--small el-button--text"><span>已撤销</span></a>
+                    </div>
+                </div>
+                <div class="el-form-item">
+                    <label class="el-form-item__label" style="width: 100px;">选择时间：</label>
+                    <div class="el-form-item__content" style="margin-left: 100px;">
+                        <div class="el-date-editor el-input el-date-editor--time-select width-160">
+                            <input type="text" placeholder="选择开始时间" autocomplete="off" class="el-input__inner">
+                        </div>
+                        <span class="marl5 marr5">至</span>
+                        <div class="el-date-editor el-input el-date-editor--time-select width-160">
+                            <input type="text" placeholder="选择结束时间" autocomplete="off" class="el-input__inner">
+                        </div>
+                        <button type="button" class="el-button el-button--primary el-button--small marl20"><span>查询</span></button>
+                    </div>
+                </div>
             </div>
             <div class="mart20 clearfix">
                 <div class="el-select floatleft width-100">
@@ -148,6 +295,7 @@
                     </div>
                 </div>
                 <button type="button" class="el-button el-button--grey el-button--small floatleft marl10 width-80"><span>批量审核</span></button>
+
             </div>
             <table class="table_cell mart10">
                 <colgroup>

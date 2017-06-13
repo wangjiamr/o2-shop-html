@@ -545,4 +545,43 @@ a:hover, .news-list li a:hover {
 .el-textarea textarea{resize: none;}
 .el-checkbox__inner{width: 14px;height:14px;}
 
-
+.admin_layout .el-input-group{border-radius: 20px;border: 1px solid #c4cfd4;}
+.admin_layout .el-input-group .el-input__inner{border:0;background: none;border-left:1px solid #dbe5ea;}
+.admin_layout .el-input-group .el-select .el-input__inner{border:0;}
+.admin_layout .el-input-group .el-select,.admin_layout .el-input-group  .el-input,.admin_layout .el-input-group .el-input__inner{height: 28px;}
+.admin_layout .el-input-group .el-input-group__prepend{border-radius:20px 0 0 20px;border:0;background: none;}
+.admin_layout .el-input-group .el-input-group__append{border-radius:0 20px 20px 0;border:0;background: none;}
+.admin_layout .el-input-group .el-date-editor.el-date-editor--daterange{width:200px;}
+.admin_layout .el-input-group .el-date-editor .el-input__inner{border:1px solid #c0ccda;border-radius:0;}
+.coin-select{height:38px;position: relative;}
+.coin-select img{width: 20px;height: 20px;vertical-align: middle;}
+.coin-select .el-radio-group .font14 em{font-size: 14px;}
+.coin-select .el-icon-caret-bottom{position: absolute;right:10px;top:13px;color: #888;}
+.coin-select .el-radio-button__inner{padding:7px 15px;}
+.coin-select .el-radio-button__inner:hover{color: #333;cursor: default;}
+.coin-select .coin_box .coin_one img{width:20px;height:20px;vertical-align: middle;margin-right:6px;}
+.coin-select .coin_box{width:318px;min-height:100px;padding:5px 0;position: absolute;left:2px;top:50px;background: #fff;border-top: 3px solid #3891ff;box-shadow:0 0 10px rgba(47, 81, 133, .5);display: none;}
+.coin-select .coin_box .coin_one{width:110px;height: 38px;line-height: 38px;padding: 0 10px;float: left;margin:0 10px 0 10px;cursor: pointer;}
+.coin-select .coin_box .coin_one:hover{background: #f4f7f9;}
+.coin-select .arrow_bt{display: block;position: absolute;border-right: 6px solid transparent;border-left: 6px solid transparent;border-bottom:7px solid #3891ff;left:10%;top:-10px;}
+.coin-select.current .coin_box{display: block;z-index:30;}
+.coin-select.current .el-icon-caret-bottom{transform:rotate(-180deg);transition: 0.2s;-webkit-transition: 0.2s;}
+.admin_layout .search_box{height:30px;border-radius: 20px;border: 1px solid #c4cfd4;background: #fff;vertical-align: middle;}
+.admin_layout .dropdown_menu{padding-right:19px;line-height:22px;position: relative;border-right:1px solid #dbe5ea;text-indent:15px;float: left;height:80%;top: 3px;}
+.admin_layout .dropdown_menu .arrow{display: inline-block;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #b0bec5;position: absolute;top:10px;right:5px;transition:0.3s;}
+.admin_layout .dropdown_ul{width:100%;background: #fff;border:1px solid #b0bec5;position: absolute;top:25px;border-radius:3px;box-shadow:0 0 20px rgba(219, 229, 234, .6);z-index: 20;}
+/*.admin_layout .dropdown_ul{display:none;transition:0.3s;}*/
+.admin_layout .dropdown_ul li a{display: block;line-height:30px;}
+.admin_layout .dropdown_ul li a:hover,.admin_layout .dropdown_ul li.current a{background: #dbe5ea;}
+.admin_layout .dropdown_menu.dropdown_active .arrow{transform: rotate(180deg);}
+/*.admin_layout .dropdown_menu:hover .dropdown_ul{display: block;z-index: 20;}*/
+.admin_layout .search_box .input{height:30px;border:0;border-radius:0 20px 20px 0;outline: 0;text-indent: 5px;}
+.admin_layout .search_box .el-icon-search{cursor: pointer;position: relative;top:3px;}
+.admin_layout .dropdown_leave{opacity: 0;transition: 0.3s;}
+.admin_layout .el-form_check{background: #edf2f7;padding: 10px 0;}
+.admin_layout .el-form_check .el-form-item:not(:last-child) .el-form-item__content{border-bottom: 1px dashed #dbdadf;padding-bottom:5px;}
+.admin_layout .el-form_check .el-form-item{margin-bottom: 5px;}
+.admin_layout .el-form_check .el-input__inner{height: 30px;}
+.admin_layout .el-form_check a.el-button{margin-right: 10px;}
+.admin_layout .el-form_check .el-button--text{color:#333;}
+.admin_layout .el-input-group--prepend {background: #fff;}
